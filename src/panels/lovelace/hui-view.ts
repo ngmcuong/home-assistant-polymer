@@ -7,6 +7,8 @@ import {
 } from "lit-element";
 
 import "../../components/entity/ha-state-label-badge";
+import '@fabricelements/skeleton-carousel/skeleton-carousel.js';
+
 // This one is for types
 // tslint:disable-next-line
 import { HaStateLabelBadge } from "../../components/entity/ha-state-label-badge";
@@ -94,20 +96,20 @@ export class HUIView extends LitElement {
       <div id="badges"></div>
       <div id="columns"></div>
       ${this.lovelace!.editMode
-        ? html`
+      ? html`
             <paper-fab
               elevated="2"
               icon="hass:plus"
               title="${this.hass!.localize(
-                "ui.panel.lovelace.editor.edit_card.add"
-              )}"
+        "ui.panel.lovelace.editor.edit_card.add"
+      )}"
               @click="${this._addCard}"
               class="${classMap({
-                rtl: computeRTL(this.hass!),
-              })}"
+        rtl: computeRTL(this.hass!),
+      })}"
             ></paper-fab>
           `
-        : ""}
+      : ""}
     `;
   }
 
@@ -302,7 +304,17 @@ export class HUIView extends LitElement {
     columns = columns.filter((val) => val.length > 0);
 
     columns.forEach((column) => {
-      const columnEl = document.createElement("div");
+      const colNum = columns.length;
+      let columnEl;
+      if (colNum > 1) {
+        columnEl = document.createElement("div");
+      } else {
+        columnEl = document.createElement("skeleton-carousel");
+        columnEl.dots = false;
+        columnEl.nav = true;
+        columnEl.loop = true;
+      }
+
       columnEl.classList.add("column");
       column.forEach((el) => columnEl.appendChild(el));
       root.appendChild(columnEl);
