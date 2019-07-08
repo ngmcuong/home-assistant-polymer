@@ -356,10 +356,12 @@ export class HuiLightCard extends LitElement implements LovelaceCard {
   }
 
   private _handleTap() {
+  alert('Toggle!!!!!');
     toggleEntity(this.hass!, this._config!.entity!);
   }
 
   private _handleMoreInfo() {
+  console.log('OMG');
     fireEvent(this, "hass-more-info", {
       entityId: this._config!.entity,
     });

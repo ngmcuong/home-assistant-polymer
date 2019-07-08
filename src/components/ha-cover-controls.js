@@ -10,6 +10,13 @@ class HaCoverControls extends PolymerElement {
       <style>
         .state {
           white-space: nowrap;
+          --paper-icon-button: {
+            border: 1px solid #BEBEBE;
+            border-radius: 5px;
+            height: 30px;
+            width: 30px;
+            padding: 3px;
+          }
         }
         [invisible] {
           visibility: hidden !important;
@@ -18,7 +25,7 @@ class HaCoverControls extends PolymerElement {
 
       <div class="state">
         <paper-icon-button
-          icon="hass:arrow-up"
+          icon="hass:chevron-up"
           on-click="onOpenTap"
           invisible$="[[!entityObj.supportsOpen]]"
           disabled="[[computeOpenDisabled(stateObj, entityObj)]]"
@@ -29,7 +36,7 @@ class HaCoverControls extends PolymerElement {
           invisible$="[[!entityObj.supportsStop]]"
         ></paper-icon-button>
         <paper-icon-button
-          icon="hass:arrow-down"
+          icon="hass:chevron-down"
           on-click="onCloseTap"
           invisible$="[[!entityObj.supportsClose]]"
           disabled="[[computeClosedDisabled(stateObj, entityObj)]]"

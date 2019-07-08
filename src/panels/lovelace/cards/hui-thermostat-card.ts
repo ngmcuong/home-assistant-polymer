@@ -99,13 +99,13 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
 
     if (!stateObj) {
       return html`
-        <hui-warning
-          >${this.hass.localize(
+        <hui-warning>
+          ${this.hass.localize(
             "ui.panel.lovelace.warning.entity_not_found",
             "entity",
             this._config.entity
-          )}</hui-warning
-        >
+          )}
+        </hui-warning>
       `;
     }
 
@@ -114,50 +114,52 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
       : "unknown-mode";
     return html`
       ${this.renderStyle()}
-      <ha-card
-        class="${classMap({
-          [mode]: true,
-          large: this._broadCard!,
-          small: !this._broadCard,
-        })}">
-        <div id="root">
-          <paper-icon-button
-            icon="hass:dots-vertical"
-            class="more-info"
-            @click="${this._handleMoreInfo}"
-          ></paper-icon-button>
-          <div id="thermostat"></div>
-          <div id="tooltip">
-            <div class="title">${this._config.name ||
-              computeStateName(stateObj)}</div>
-            <div class="current-temperature">
-              <span class="current-temperature-text">
-                ${stateObj.attributes.current_temperature}
-                ${
-                  stateObj.attributes.current_temperature
-                    ? html`
-                        <span class="uom"
-                          >${this.hass.config.unit_system.temperature}</span
-                        >
-                      `
-                    : ""
-                }
-              </span>
+      <div class="wrapper">
+        <ha-card
+          class="${classMap({
+            [mode]: true,
+            large: this._broadCard!,
+            small: !this._broadCard,
+          })}">
+          <div id="root">
+            <paper-icon-button
+              icon="hass:pencil"
+              class="more-info"
+              @click="${this._handleMoreInfo}"
+            ></paper-icon-button>
+            <div id="thermostat"></div>
+            <div id="tooltip">
+              <div class="title">${this._config.name ||
+                computeStateName(stateObj)}</div>
+              <div class="current-temperature">
+                  <span class="current-temperature-text">
+                  ${stateObj.attributes.current_temperature}
+                  ${
+                    stateObj.attributes.current_temperature
+                      ? html`
+                          <span class="uom"
+                            >${this.hass.config.unit_system.temperature}</span
+                          >
+                        `
+                      : ""
+                  }
+                </span>
+                <div id="set-temperature"></div>
+              </div>
+          </div>
+          </div>
+          <div class="climate-info">
+            <div class="current-mode">
+              Mode: ${this._renderCurrentMode(mode, stateObj)}
             </div>
-            <div class="climate-info">
-            <div id="set-temperature"></div>
-            <div class="current-mode">${this.hass!.localize(
-              `state.climate.${stateObj.state}`
-            )}</div>
             <div class="modes">
-              ${(stateObj.attributes.operation_list || []).map((modeItem) =>
-                this._renderIcon(modeItem, mode)
-              )}
+              ${(stateObj.attributes.operation_list || []).map((modeItem) => this._renderIcon(modeItem, mode))}
             </div>
           </div>
-        </div>
-      </ha-card>
-    `;
+          </ha-card>
+        <div class="clear-background"></div>
+      </div>
+`;
   }
 
   protected shouldUpdate(changedProps: PropertyValues): boolean {
@@ -341,6 +343,14 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
     `;
   }
 
+  private _renderCurrentMode(currentMode: string, stateObj: any): TemplateResult {
+    return html`
+      <span class=${currentMode}>
+        ${this.hass!.localize(`state.climate.${stateObj.state}`)}  
+      </span>
+    `
+  }
+
   private _handleMoreInfo() {
     fireEvent(this, "hass-more-info", {
       entityId: this._config!.entity,
@@ -376,8 +386,21 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
         :host {
           display: block;
         }
+        .wrapper {
+          position: relative;
+          margin: 16px;
+          height: 95%;
+        }
         ha-card {
           overflow: hidden;
+          min-height: 275px;
+          height: 100%;
+          position: relative;
+          background: transparent;
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+          border-radius: 16px;
+          z-index: 2;
+          
           --rail-border-color: transparent;
           --auto-color: green;
           --eco-color: springgreen;
@@ -390,39 +413,60 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           --idle-color: #8a8a8a;
           --unknown-color: #bac;
         }
+        .clear-background {
+          height: 100%;
+          width: 100%;
+          background: white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: .8;
+          z-index: 1;
+          border-radius: 16px;
+        }
         #root {
           position: relative;
           overflow: hidden;
         }
         .auto {
           --mode-color: var(--auto-color);
+          color: var(--auto-color);
         }
         .cool {
           --mode-color: var(--cool-color);
+          color: var(--cool-color);
         }
         .heat {
           --mode-color: var(--heat-color);
+          color: var(--heat-color);
         }
         .manual {
           --mode-color: var(--manual-color);
+          color: var(--manual-color);
         }
         .off {
           --mode-color: var(--off-color);
+          color: var(--off-color);
         }
         .fan_only {
           --mode-color: var(--fan_only-color);
+          color: var(--fan_only-color);
         }
         .eco {
           --mode-color: var(--eco-color);
+          color: var(--eco-color);
         }
         .dry {
           --mode-color: var(--dry-color);
+          color: var(--dry-color);
         }
         .idle {
           --mode-color: var(--idle-color);
+          color: var(--idle-color);
         }
         .unknown-mode {
           --mode-color: var(--unknown-color);
+          color: var(--unknown-color);
         }
         .no-title {
           --title-position-top: 33% !important;
@@ -433,13 +477,14 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           --title-font-size: 28px;
           --title-position-top: 27%;
           --climate-info-position-top: 81%;
-          --set-temperature-font-size: 25px;
+          --set-temperature-font-size: 29px;
           --current-temperature-font-size: 71px;
           --current-temperature-position-top: 10%;
           --current-temperature-text-padding-left: 15px;
-          --uom-font-size: 20px;
-          --uom-margin-left: -18px;
+          --uom-font-size: 44px;
+          --uom-margin-left: -20px;
           --current-mode-font-size: 18px;
+          --set-temperature-margin-top: -15px;
           --set-temperature-margin-bottom: -5px;
         }
         .small {
@@ -448,14 +493,15 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           --title-font-size: 18px;
           --title-position-top: 28%;
           --climate-info-position-top: 79%;
-          --set-temperature-font-size: 16px;
+          --set-temperature-font-size: 20px;
           --current-temperature-font-size: 25px;
           --current-temperature-position-top: 5%;
           --current-temperature-text-padding-left: 7px;
-          --uom-font-size: 12px;
-          --uom-margin-left: -5px;
+          --uom-font-size: 30px;
+          --uom-margin-left: -12px;
           --current-mode-font-size: 14px;
           --set-temperature-margin-bottom: 0px;
+          --set-temperature-margin-top: -5px;
         }
         #thermostat {
           margin: 0 auto var(--thermostat-margin-bottom);
@@ -503,6 +549,7 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
         #set-temperature {
           font-size: var(--set-temperature-font-size);
           margin-bottom: var(--set-temperature-margin-bottom);
+          margin-top: var(--set-temperature-margin-top);
         }
         .title {
           font-size: var(--title-font-size);
@@ -513,33 +560,44 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
         }
         .climate-info {
           position: absolute;
-          top: var(--climate-info-position-top);
-          left: 50%;
-          transform: translate(-50%, -50%);
+          bottom: -1px;
+          left: -1px;
+          text-align: center;
           width: 100%;
+          z-index: 16;
         }
         .current-mode {
           font-size: var(--current-mode-font-size);
-          color: var(--secondary-text-color);
+          color: #707070;
+          background: white;
+          padding: 10px 0;
         }
         .modes {
-          margin-top: 16px;
+          width: 102%;
+          display: flex;
+          padding-bottom: 5px;
         }
         .modes ha-icon {
+          flex: 1;
           color: var(--disabled-text-color);
           cursor: pointer;
           display: inline-block;
-          margin: 0 10px;
+          padding: 5px;
+          border: 1px solid #F2F2F2;
+          border-bottom: none;
         }
         .modes ha-icon.selected-icon {
           color: var(--mode-color);
         }
         .current-temperature {
           position: absolute;
-          top: 50%;
+          top: 60%;
           left: 50%;
           transform: translate(-50%, -50%);
           font-size: var(--current-temperature-font-size);
+          font-weight: bold;
+          font-size: 64px;
+          line-height: 64px;
         }
         .current-temperature-text {
           padding-left: var(--current-temperature-text-padding-left);
@@ -548,14 +606,20 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           font-size: var(--uom-font-size);
           vertical-align: top;
           margin-left: var(--uom-margin-left);
+          padding-top: 15px;
+          font-weight: bold;
+          text-transform: lowercase;
+          line-height: 34px;
         }
         .more-info {
           position: absolute;
           cursor: pointer;
-          top: 0;
-          right: 0;
+          top: 10px;
+          right: 10px;
           z-index: 25;
-          color: var(--secondary-text-color);
+          color: #666666;
+          border: 1px solid #666666;
+          border-radius: 5px;
         }
       </style>
     `;

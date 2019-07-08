@@ -1,28 +1,64 @@
-import "@polymer/paper-checkbox/paper-checkbox";
-import "@polymer/paper-dropdown-menu/paper-dropdown-menu";
-import "@polymer/paper-icon-button/paper-icon-button";
-import "@polymer/paper-input/paper-input";
-import "@polymer/paper-item/paper-item";
-import "@polymer/paper-listbox/paper-listbox";
-import { html } from "@polymer/polymer/lib/utils/html-tag";
-import { PolymerElement } from "@polymer/polymer/polymer-element";
+import '@polymer/paper-checkbox/paper-checkbox'
+import '@polymer/paper-dropdown-menu/paper-dropdown-menu'
+import '@polymer/paper-icon-button/paper-icon-button'
+import '@polymer/paper-input/paper-input'
+import '@polymer/paper-item/paper-item'
+import '@polymer/paper-listbox/paper-listbox'
+import '@polymer/iron-icon/iron-icon.js'
+import '@polymer/iron-icons/iron-icons.js'
 
-import "./ha-paper-slider";
-import EventsMixin from "../mixins/events-mixin";
+import { html } from '@polymer/polymer/lib/utils/html-tag'
+import { PolymerElement } from '@polymer/polymer/polymer-element'
+
+import './ha-paper-slider'
+import EventsMixin from '../mixins/events-mixin'
 
 /*
  * @appliesMixin EventsMixin
  */
 class HaForm extends EventsMixin(PolymerElement) {
-  static get template() {
+  static get template () {
     return html`
       <style>
         .error {
           color: red;
+          margin-bottom: 16px;
         }
         paper-checkbox {
           display: inline-block;
           padding: 22px 0;
+        }
+        paper-input {
+          --paper-input-container: {
+            display: flex;
+            height: 50px;
+            background-color: rgba(0,0,0,0.1);
+            margin-bottom: 16px;
+            vertical-align: middle;
+            border-radius: 5px;
+            padding: 5px 8px;
+          }
+          --paper-input-container-underline: {
+            display: none;
+          };
+          --paper-input-container-underline-focus: {
+            display: none;
+          };
+          --paper-input-container-underline-disabled: {
+            display: none;
+          };
+          --paper-input-container-input: {
+            width: calc(100vw - 112px);
+            max-width: 275px;
+          }
+        }
+        
+        .input-wrapper {
+          padding-bottom: 5px;
+        }
+        
+        .icon {
+          padding-right: 8px;
         }
       </style>
       <template is="dom-if" if="[[_isArray(schema)]]" restamp="">
@@ -64,6 +100,8 @@ class HaForm extends EventsMixin(PolymerElement) {
               auto-validate="[[schema.required]]"
               error-message="Required"
             >
+              <img src="/static/icons/ic_lock.png" alt="password icon" slot="prefix" class="icon" />
+
               <paper-icon-button
                 toggles
                 active="{{unmaskedPassword}}"
@@ -86,7 +124,9 @@ class HaForm extends EventsMixin(PolymerElement) {
               required="[[schema.required]]"
               auto-validate="[[schema.required]]"
               error-message="Required"
-            ></paper-input>
+            >
+              <img src="/static/icons/ic_person.png" alt="account-icon" slot="prefix" class="icon" />
+            </paper-input>
           </template>
         </template>
 
@@ -161,10 +201,10 @@ class HaForm extends EventsMixin(PolymerElement) {
           </paper-dropdown-menu>
         </template>
       </template>
-    `;
+    `
   }
 
-  static get properties() {
+  static get properties () {
     return {
       data: {
         type: Object,
@@ -186,55 +226,55 @@ class HaForm extends EventsMixin(PolymerElement) {
         type: Function,
         value: () => (error, schema) => error, // eslint-disable-line no-unused-vars
       },
-    };
+    }
   }
 
-  _isArray(val) {
-    return Array.isArray(val);
+  _isArray (val) {
+    return Array.isArray(val)
   }
 
-  _isRange(schema) {
-    return "valueMin" in schema && "valueMax" in schema;
+  _isRange (schema) {
+    return 'valueMin' in schema && 'valueMax' in schema
   }
 
-  _equals(a, b) {
-    return a === b;
+  _equals (a, b) {
+    return a === b
   }
 
-  _includes(a, b) {
-    return a.indexOf(b) >= 0;
+  _includes (a, b) {
+    return a.indexOf(b) >= 0
   }
 
-  _getValue(obj, item) {
+  _getValue (obj, item) {
     if (obj) {
-      return obj[item.name];
+      return obj[ item.name ]
     }
-    return null;
+    return null
   }
 
-  _valueChanged(ev) {
-    let value = ev.detail.value;
-    if (ev.model.item.type === "integer") {
-      value = Number(ev.detail.value);
+  _valueChanged (ev) {
+    let value = ev.detail.value
+    if (ev.model.item.type === 'integer') {
+      value = Number(ev.detail.value)
     }
-    this.set(["data", ev.model.item.name], value);
+    this.set(['data', ev.model.item.name], value)
   }
 
-  _passwordFieldType(unmaskedPassword) {
-    return unmaskedPassword ? "text" : "password";
+  _passwordFieldType (unmaskedPassword) {
+    return unmaskedPassword ? 'text' : 'password'
   }
 
-  _passwordFieldIcon(unmaskedPassword) {
-    return unmaskedPassword ? "hass:eye-off" : "hass:eye";
+  _passwordFieldIcon (unmaskedPassword) {
+    return unmaskedPassword ? 'hass:eye-off' : 'hass:eye'
   }
 
-  _optionValue(item) {
-    return Array.isArray(item) ? item[0] : item;
+  _optionValue (item) {
+    return Array.isArray(item) ? item[ 0 ] : item
   }
 
-  _optionLabel(item) {
-    return Array.isArray(item) ? item[1] : item;
+  _optionLabel (item) {
+    return Array.isArray(item) ? item[ 1 ] : item
   }
 }
 
-customElements.define("ha-form", HaForm);
+customElements.define('ha-form', HaForm)

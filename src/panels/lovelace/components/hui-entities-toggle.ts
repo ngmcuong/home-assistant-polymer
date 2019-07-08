@@ -17,11 +17,18 @@ import { forwardHaptic } from "../../../util/haptics";
 
 @customElement("hui-entities-toggle")
 class HuiEntitiesToggle extends LitElement {
+  constructor() {
+    super();
+    this._isToggleOn = false;
+  }
+
   @property() public entities?: string[];
 
   @property() protected hass?: HomeAssistant;
 
   @property() private _toggleEntities?: string[];
+
+  @property() private _isToggleOn?: boolean;
 
   public updated(changedProperties: PropertyValues): void {
     super.updated(changedProperties);
@@ -34,6 +41,13 @@ class HuiEntitiesToggle extends LitElement {
     }
   }
 
+  private _isOn(): boolean {
+    return this._toggleEntities!.some((entityId) => {
+          const stateObj = this.hass!.states[entityId];
+          return stateObj && stateObj.state === "on";
+        });
+  }
+
   protected render(): TemplateResult | void {
     if (!this._toggleEntities) {
       return html``;
@@ -41,11 +55,9 @@ class HuiEntitiesToggle extends LitElement {
 
     return html`
       <paper-toggle-button
-        ?checked="${this._toggleEntities!.some((entityId) => {
-          const stateObj = this.hass!.states[entityId];
-          return stateObj && stateObj.state === "on";
-        })}"
+        ?checked="${this._isOn()}"
         @change="${this._callService}"
+        class="${(this._isOn() || this._isToggleOn) ? 'on' : 'off'}"
       ></paper-toggle-button>
     `;
   }
@@ -53,14 +65,31 @@ class HuiEntitiesToggle extends LitElement {
   static get styles(): CSSResult {
     return css`
       :host {
-        width: 38px;
+        width: 50px;
         display: block;
+        margin: auto 0;
       }
+      
       paper-toggle-button {
         cursor: pointer;
         --paper-toggle-button-label-spacing: 0;
-        padding: 13px 5px;
-        margin: -4px -5px;
+        padding: 3px;
+        margin: -5px 5px;
+        background-color: #999999;
+        width: 50px;
+        border-radius: 16px;
+        
+        --paper-toggle-button-checked-button-color: white;
+        --paper-toggle-button-unchecked-button-color: white;
+        --paper-toggle-button-checked-bar-color: #00AE00;
+        --paper-toggle-button-unchecked-bar-color: #999999;
+      }
+      paper-toggle-button.on {
+        background-color: #00AE00;
+      }
+      paper-toggle-button.on::before {
+        content: '';
+        width: 13px;
       }
     `;
   }
@@ -69,6 +98,8 @@ class HuiEntitiesToggle extends LitElement {
     forwardHaptic(this, "light");
     const turnOn = (ev.target as PaperToggleButtonElement).checked;
     turnOnOffEntities(this.hass!, this._toggleEntities!, turnOn!);
+    this._isToggleOn = turnOn!;
+
   }
 }
 

@@ -59,7 +59,7 @@ export class HuiIframeCard extends LitElement implements LovelaceCard {
             "padding-top": aspectRatio,
           })}"
         >
-          <iframe src="${this._config.url}"></iframe>
+	<iframe src="https://www.google.com"></iframe>
         </div>
       </ha-card>
     `;

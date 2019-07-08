@@ -51,6 +51,10 @@ class HaClimateControl extends EventsMixin(PolymerElement) {
             icon="hass:chevron-down"
             on-click="decrementValue"
           ></paper-icon-button>
+	<paper-icon-button
+            icon="hass:chevron-down"
+            on-click="decrementValue"
+          ></paper-icon-button>
         </div>
       </div>
     `;

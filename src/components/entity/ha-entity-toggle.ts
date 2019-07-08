@@ -51,6 +51,7 @@ class HaEntityToggle extends LitElement {
       <paper-toggle-button
         .checked=${this._isOn}
         @change=${this._toggleChanged}
+        class=${this._isOn ? 'on' : 'off'}
       ></paper-toggle-button>
     `;
   }
@@ -146,8 +147,24 @@ class HaEntityToggle extends LitElement {
       paper-toggle-button {
         cursor: pointer;
         --paper-toggle-button-label-spacing: 0;
-        padding: 13px 5px;
-        margin: -4px -5px;
+        padding: 3px;
+        margin: -5px -10px;
+        background-color: #999999;
+        width: 54px;
+        border-radius: 16px;
+        
+        --paper-toggle-button-checked-button-color: white;
+        --paper-toggle-button-unchecked-button-color: white;
+        --paper-toggle-button-checked-bar-color: #00AE00;
+        --paper-toggle-button-unchecked-bar-color: #999999;
+      }
+      
+      paper-toggle-button.on {
+        background-color: #00AE00;
+      }
+      paper-toggle-button.on::before {
+        content: '';
+        width: 18px;
       }
     `;
   }

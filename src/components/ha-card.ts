@@ -12,7 +12,7 @@ class HaCard extends LitElement {
 
   static get styles(): CSSResult {
     return css`
-      :host {
+    :host {
         background: var(
           --ha-card-background,
           var(--paper-card-background-color, white)
@@ -27,6 +27,7 @@ class HaCard extends LitElement {
         color: var(--primary-text-color);
         display: block;
         transition: all 0.3s ease-out;
+        position: relative;
       }
       .header:not(:empty) {
         font-size: 24px;
@@ -39,7 +40,7 @@ class HaCard extends LitElement {
   }
 
   protected render(): TemplateResult {
-    return html`
+  return html`
       <div class="header">${this.header}</div>
       <slot></slot>
     `;

@@ -44,7 +44,7 @@ class HuiGenericEntityRow extends LitElement {
         >
       `;
     }
-
+    
     return html`
       <state-badge
         .stateObj="${stateObj}"
@@ -88,10 +88,13 @@ class HuiGenericEntityRow extends LitElement {
       :host {
         display: flex;
         align-items: center;
+        border-bottom: 1px solid #F2F2F2;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 14px;
       }
       .flex {
         flex: 1;
-        margin-left: 16px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -120,7 +123,10 @@ class HuiGenericEntityRow extends LitElement {
       }
       state-badge {
         flex: 0 0 40px;
+        color: var(--primary-color);
+
       }
+      
       :host([rtl]) .flex {
         margin-left: 0;
         margin-right: 16px;

@@ -79,7 +79,7 @@ class HaSidebar extends LitElement {
 
     return html`
       <app-toolbar>
-        <div main-title>Home Assistant</div>
+        <div main-title>DQSMART</div>
         ${hass.user
           ? html`
               <a href="/profile">
@@ -231,6 +231,7 @@ class HaSidebar extends LitElement {
       }
 
       app-toolbar {
+        letter-spacing: 2px;
         font-weight: 400;
         color: var(--primary-text-color);
         border-bottom: 1px solid var(--divider-color);

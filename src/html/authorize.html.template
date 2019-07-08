@@ -1,37 +1,70 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Home Assistant</title>
+    <title>DQSMART</title>
     <link rel='preload' href='/static/fonts/roboto/Roboto-Light.ttf' as='font' crossorigin />
     <link rel='preload' href='/static/fonts/roboto/Roboto-Regular.ttf' as='font' crossorigin />
     <%= require('raw-loader!./_header.html.template').default %>
     <style>
-      .content {
-        padding: 20px 16px;
-        max-width: 360px;
-        margin: 0 auto;
+      body {
+          background: url("/static/images/login-background.png") no-repeat;
+          background-size: cover;
       }
+    .content {
+      padding: 20px 16px;
+      max-width: 360px;
+      margin: 0 auto;
+    }
 
-      .header {
-        font-size: 1.96em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 300;
-      }
+    .header {
+      font-size: 1.96em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 300;
+    }
 
-      .header img {
-        margin-right: 16px;
-      }
+    .logo {
+      width: 164px;
+      height: 164px;
+      background: #EC2028;
+    }
+
+    .header img {
+      margin-left: 50%;
+      margin-top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .header-text {
+      color: #FC313E;
+      font-size: 20px;
+      letter-spacing: 5px;
+      line-height: 24px;
+    }
+
+    .footer {
+      font-size: 12px;
+      position: absolute;
+      width: 100%;
+      bottom: 16px;
+      left: 0;
+      text-align: center;
+      color: #FC313E;
+    }
     </style>
   </head>
   <body>
     <div class="content">
       <div class='header'>
-        <img src="/static/icons/favicon-192x192.png" height="52">
-        Home Assistant
+      <div class="logo">
+        <img src="/static/icons/favicon-512x512.png" height="64" alt="DQ Logo">
+      </div>
+      <h3 class="header-text">DQSMART</h3>
       </div>
       <ha-authorize><p>Initializing</p></ha-authorize>
+      <div class="footer">Powered by Dien Quang®</div>
     </div>
     <% if (!latestBuild) { %>
       <script src="/static/custom-elements-es5-adapter.js"></script>

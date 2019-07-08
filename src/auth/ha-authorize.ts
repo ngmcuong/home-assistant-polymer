@@ -84,15 +84,7 @@ class HaAuthorize extends litLocalizeLiteMixin(LitElement) {
     );
 
     return html`
-      <p>
-        ${this.localize(
-          "ui.panel.page-authorize.authorizing_client",
-          "clientId",
-          this.clientId
-        )}
-      </p>
-      ${loggingInWith}
-
+      <!-- TODO: add logo here ! -->
       <ha-auth-flow
         .resources="${this.resources}"
         .clientId="${this.clientId}"
@@ -166,6 +158,9 @@ class HaAuthorize extends litLocalizeLiteMixin(LitElement) {
 
   static get styles(): CSSResult {
     return css`
+      :host {
+      }
+      
       ha-pick-auth-provider {
         display: block;
         margin-top: 48px;

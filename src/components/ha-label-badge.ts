@@ -114,13 +114,13 @@ class HaLabelBadge extends LitElement {
           font-size: 0.5em;
         }
         .label-badge .label span {
+          font-size: 120%;
           box-sizing: border-box;
           max-width: 100%;
           display: inline-block;
-          background-color: var(--ha-label-badge-color, var(--primary-color));
-          color: var(--ha-label-badge-label-color, white);
+          color: var(--ha-label-badge-color, var(--primary-color));
           border-radius: 1em;
-          padding: 9% 16% 8% 16%; /* mostly apitalized text, not much descenders => bit more top margin */
+          padding: 9% 16% 25% 16%; /* mostly apitalized text, not much descenders => bit more top margin */
           font-weight: 500;
           overflow: hidden;
           text-transform: uppercase;
