@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="ubuntu" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="ubuntu">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home-assistant-polymer" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/home-assistant-polymer/node_modules" />
+            <excludedPath path="/home-assistant-polymer/.vscode" />
+            <excludedPath path="/home-assistant-polymer/home-assistant-polymer" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ON_EXPLICIT_SAVE" />
+  </component>
+</project>

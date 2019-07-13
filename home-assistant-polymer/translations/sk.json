@@ -1,0 +1,1149 @@
+{
+    "panel": {
+        "config": "Nastavenia",
+        "states": "Prehľad",
+        "map": "Mapa",
+        "logbook": "Denník",
+        "history": "História",
+        "mailbox": "Poštová schránka",
+        "shopping_list": "Nákupný zoznam",
+        "dev-services": "Služby",
+        "dev-states": "Stavy",
+        "dev-events": "Udalosti",
+        "dev-templates": "Šablóny",
+        "dev-mqtt": "MQTT",
+        "dev-info": "Info",
+        "calendar": "Kalendár",
+        "profile": "Profil"
+    },
+    "state": {
+        "default": {
+            "off": "Neaktívny",
+            "on": "Aktívny",
+            "unknown": "Neznámy",
+            "unavailable": "Nedostupný"
+        },
+        "alarm_control_panel": {
+            "armed": "Aktívny",
+            "disarmed": "Neaktívny",
+            "armed_home": "Aktívny doma",
+            "armed_away": "Aktívny v neprítomnosti",
+            "armed_night": "Aktívny v noci",
+            "pending": "Čaká sa",
+            "arming": "Aktivuje sa",
+            "disarming": "Deaktivuje sa",
+            "triggered": "Spustený",
+            "armed_custom_bypass": "Zakódované prispôsobené vylúčenie"
+        },
+        "automation": {
+            "off": "Neaktívna",
+            "on": "Aktívna"
+        },
+        "binary_sensor": {
+            "default": {
+                "off": "Neaktívny",
+                "on": "Aktívny"
+            },
+            "moisture": {
+                "off": "Sucho",
+                "on": "Vlhko"
+            },
+            "gas": {
+                "off": "Žiadny plyn",
+                "on": "Zachytený plyn"
+            },
+            "motion": {
+                "off": "Kľud",
+                "on": "Pohyb"
+            },
+            "occupancy": {
+                "off": "Voľné",
+                "on": "Obsadené"
+            },
+            "smoke": {
+                "off": "Žiadny dym",
+                "on": "Zachytený dym"
+            },
+            "sound": {
+                "off": "Ticho",
+                "on": "Zachytený zvuk"
+            },
+            "vibration": {
+                "off": "Kľud",
+                "on": "Zachytené vibrácie"
+            },
+            "opening": {
+                "off": "Zatvorené",
+                "on": "Otvorené"
+            },
+            "safety": {
+                "off": "Zabezpečené",
+                "on": "Nezabezpečené"
+            },
+            "presence": {
+                "off": "Preč",
+                "on": "Doma"
+            },
+            "battery": {
+                "off": "Normálna",
+                "on": "Slabá"
+            },
+            "problem": {
+                "off": "OK",
+                "on": "Problém"
+            },
+            "connectivity": {
+                "off": "Odpojený",
+                "on": "Pripojený"
+            },
+            "cold": {
+                "off": "Normálny",
+                "on": "Studený"
+            },
+            "door": {
+                "off": "Zatvorené",
+                "on": "Otvorené"
+            },
+            "garage_door": {
+                "off": "Zatvorené",
+                "on": "Otvorené"
+            },
+            "heat": {
+                "off": "Normálny",
+                "on": "Horúci"
+            },
+            "window": {
+                "off": "Zatvorené",
+                "on": "Otvorené"
+            },
+            "lock": {
+                "off": "Zamknutý",
+                "on": "Odomknutý"
+            }
+        },
+        "calendar": {
+            "off": "Neaktívny",
+            "on": "Aktívny"
+        },
+        "camera": {
+            "recording": "Záznam",
+            "streaming": "Streamovanie",
+            "idle": "Nečinná"
+        },
+        "climate": {
+            "off": "Vypnuté",
+            "on": "Zapnuté",
+            "heat": "Kúrenie",
+            "cool": "Chladenie",
+            "idle": "Nečinné",
+            "auto": "Automatika",
+            "dry": "Sušenie",
+            "fan_only": "Iba ventilátor",
+            "eco": "Eco režim",
+            "electric": "Elektrické",
+            "performance": "Výkon",
+            "high_demand": "Vysoký výkon",
+            "heat_pump": "Tepelné čerpadlo",
+            "gas": "Plyn",
+            "manual": "Ručne"
+        },
+        "configurator": {
+            "configure": "Konfigurovať",
+            "configured": "Nakonfigurované"
+        },
+        "cover": {
+            "open": "Otvorené",
+            "opening": "Otvára sa",
+            "closed": "Zatvorené",
+            "closing": "Zatvára sa",
+            "stopped": "Zastavené"
+        },
+        "device_tracker": {
+            "home": "Doma",
+            "not_home": "Preč"
+        },
+        "fan": {
+            "off": "Vypnutý",
+            "on": "Zapnutý"
+        },
+        "group": {
+            "off": "Vypnutá",
+            "on": "Zapnutá",
+            "home": "Doma",
+            "not_home": "Preč",
+            "open": "Otvorená",
+            "opening": "Otvára sa",
+            "closed": "Zatvorená",
+            "closing": "Zatvára sa",
+            "stopped": "Zastavené",
+            "locked": "Zamknutá",
+            "unlocked": "Odomknutá",
+            "ok": "OK",
+            "problem": "Problém"
+        },
+        "input_boolean": {
+            "off": "Vypnuté",
+            "on": "Zapnuté"
+        },
+        "light": {
+            "off": "Vypnuté",
+            "on": "Zapnuté"
+        },
+        "lock": {
+            "locked": "Zamknutý",
+            "unlocked": "Odomknutý"
+        },
+        "media_player": {
+            "off": "Vypnutý",
+            "on": "Zapnutý",
+            "playing": "Prehrávanie",
+            "paused": "Pozastavený",
+            "idle": "Nečinný",
+            "standby": "Pohotovostný režim"
+        },
+        "plant": {
+            "ok": "OK",
+            "problem": "Problém"
+        },
+        "remote": {
+            "off": "Vypnutý",
+            "on": "Zapnutý"
+        },
+        "scene": {
+            "scening": "Scénovanie"
+        },
+        "script": {
+            "off": "Vypnutý",
+            "on": "Zapnutý"
+        },
+        "sensor": {
+            "off": "Neaktívny",
+            "on": "Aktívny"
+        },
+        "sun": {
+            "above_horizon": "Nad horizontom",
+            "below_horizon": "Za horizontom"
+        },
+        "switch": {
+            "off": "Vypnutý",
+            "on": "Zapnutý"
+        },
+        "zwave": {
+            "default": {
+                "initializing": "Inicializácia",
+                "dead": "Nereaguje",
+                "sleeping": "Úsporný režim",
+                "ready": "Pripravené"
+            },
+            "query_stage": {
+                "initializing": "Inicializácia ({query_stage})",
+                "dead": "Nereaguje ({query_stage})"
+            }
+        },
+        "weather": {
+            "clear-night": "Jasno, v noci",
+            "cloudy": "Zamračené",
+            "fog": "Hmla",
+            "hail": "Krupobitie",
+            "lightning": "Blesky",
+            "lightning-rainy": "Blesky, daždivo",
+            "partlycloudy": "Čiastočne zamračené",
+            "pouring": "Lejúco",
+            "rainy": "Daždivo",
+            "snowy": "Zasneženo",
+            "snowy-rainy": "Zasneženo, daždivo",
+            "sunny": "slnečno",
+            "windy": "Veterno",
+            "windy-variant": "Veterno"
+        },
+        "vacuum": {
+            "cleaning": "Čistí",
+            "docked": "V doku",
+            "error": "Chyba",
+            "idle": "Nečinný",
+            "off": "Vypnutý",
+            "on": "Zapnutý",
+            "paused": "Pozastavený",
+            "returning": "Vracia sa do doku"
+        },
+        "person": {
+            "home": "Doma",
+            "not_home": "Preč"
+        }
+    },
+    "state_badge": {
+        "default": {
+            "unknown": "Nezn",
+            "unavailable": "Nedost",
+            "error": "Chyba",
+            "entity_not_found": "Entita nebola nájdená"
+        },
+        "alarm_control_panel": {
+            "armed": "Zakód",
+            "disarmed": "Odkód",
+            "armed_home": "Zakód",
+            "armed_away": "Zakód",
+            "armed_night": "Zakód",
+            "pending": "Čaká",
+            "arming": "Aktivácia",
+            "disarming": "Deakt",
+            "triggered": "Alarm",
+            "armed_custom_bypass": "Zakódovaný"
+        },
+        "device_tracker": {
+            "home": "Doma",
+            "not_home": "Preč"
+        },
+        "person": {
+            "home": "Doma",
+            "not_home": "Preč"
+        }
+    },
+    "ui": {
+        "panel": {
+            "shopping-list": {
+                "clear_completed": "Úspešne vymazané",
+                "add_item": "Pridať položku",
+                "microphone_tip": "Kliknite na ikonu mikrofónu vpravo hore a povedzte “Add candy to my shopping list”"
+            },
+            "history": {
+                "showing_entries": "Zobrazujú sa záznamy pre",
+                "period": "Obdobie"
+            },
+            "logbook": {
+                "showing_entries": "Zobrazujú sa záznamy za obdobie",
+                "period": "Obdobie"
+            },
+            "mailbox": {
+                "empty": "Nemáte žiadne správy",
+                "playback_title": "Prehrávanie správ",
+                "delete_prompt": "Vymazať túto správu?",
+                "delete_button": "Vymazať"
+            },
+            "config": {
+                "header": "Konfigurovať Home Assistant",
+                "introduction": "Tu je možné konfigurovať vaše komponenty a Home Assistant. Aktuálne sa z používateľského rozhrania nedá konfigurovať všetko, ale pracujeme na tom.",
+                "core": {
+                    "caption": "Všeobecné",
+                    "description": "Skontrolujte Váš konfiguračný súbor a ovládajte server",
+                    "section": {
+                        "core": {
+                            "header": "Konfigurácia a ovládanie servera",
+                            "introduction": "Zmena konfigurácie môže byť ťažkým procesom. My vieme. Táto sekcia sa Vám pokúsi zjednodušiť život.",
+                            "validation": {
+                                "heading": "Kontrola konfigurácie",
+                                "introduction": "Overte svoju konfiguráciu, ak ste nedávno vykonali nejaké zmeny v konfigurácii a chcete sa uistiť, že je to všetko v poriadku",
+                                "check_config": "Skontrolujte konfiguráciu",
+                                "valid": "Konfigurácia je platná!",
+                                "invalid": "Konfigurácia je neplatná"
+                            },
+                            "reloading": {
+                                "heading": "Načítavanie novej konfigurácie",
+                                "introduction": "Niektoré časti aplikácie Home Assistant sa môžu načítať bez nutnosti reštartovania. Opätovným načítaním sa zahodí aktuálna konfigurácia a načíta sa nová.",
+                                "core": "Znovu načítať jadro",
+                                "group": "Znovu načítať skupiny",
+                                "automation": "Znovu načítať automatizácie",
+                                "script": "Znovu načítať skripty"
+                            },
+                            "server_management": {
+                                "heading": "Správa servera",
+                                "introduction": "Ovládajte Váš Home Assistant server... z aplikácie Home Assistant.",
+                                "restart": "Reštartovať",
+                                "stop": "Zastaviť"
+                            }
+                        }
+                    }
+                },
+                "customize": {
+                    "caption": "Prispôsobenie",
+                    "description": "Prispôsobte svoje entity",
+                    "picker": {
+                        "header": "Prispôsobenie"
+                    }
+                },
+                "automation": {
+                    "caption": "Automatizácie",
+                    "description": "Vytvárajte a upravujte automatizácie",
+                    "picker": {
+                        "header": "Editor automatizácií",
+                        "introduction": "Editor automatizácií vám umožňuje vytvárať a upravovať automatizácie. Prečítajte si prosím [pokyny](https:\/\/home-assistant.io\/docs\/automation\/editor\/), aby ste sa uistili, že ste nakonfigurovali Home Assistant správne.",
+                        "pick_automation": "Vyberte automatizáciu, ktorú chcete upraviť",
+                        "no_automations": "Nepodarilo sa nájsť žiadne editovateľné automatizácie",
+                        "add_automation": "Pridať automatizáciu",
+                        "learn_more": "Získajte viac informácií o automatizáciách"
+                    },
+                    "editor": {
+                        "introduction": "Použite automatizácie, aby váš domov ožil",
+                        "default_name": "Nová automatizácia",
+                        "save": "Uložiť",
+                        "unsaved_confirm": "Máte neuložené zmeny. Naozaj chcete odísť?",
+                        "alias": "Názov",
+                        "triggers": {
+                            "header": "Spúšťače",
+                            "introduction": "Spúšťače spúšťajú spracovanie pravidla automatizácie. Pre rovnaké pravidlo je možné určiť viac spúšťačov. Po spustení spúšťača aplikácia Home Assistant overí prípadné podmienky a zavolá akciu. \n\n [Viac informácií o spúšťačov.](https:\/\/home-assistant.io\/docs\/automation\/trigger\/)",
+                            "add": "Pridať spúšťač",
+                            "duplicate": "Duplikovať",
+                            "delete": "Odstrániť",
+                            "delete_confirm": "Ste si istý odstránením ?",
+                            "unsupported_platform": "Nepodporovaná platforma: {platform}",
+                            "type_select": "Typ spúšťača",
+                            "type": {
+                                "event": {
+                                    "label": "Udalosť",
+                                    "event_type": "Typ udalosti",
+                                    "event_data": "Dáta udalosti"
+                                },
+                                "state": {
+                                    "label": "Stav",
+                                    "from": "Z",
+                                    "to": "Na",
+                                    "for": "Trvanie stavu"
+                                },
+                                "homeassistant": {
+                                    "label": "Home Assistant",
+                                    "event": "Udalosť:",
+                                    "start": "Štart",
+                                    "shutdown": "Vypnutie"
+                                },
+                                "mqtt": {
+                                    "label": "MQTT",
+                                    "topic": "Topic",
+                                    "payload": "Správa (voliteľné)"
+                                },
+                                "numeric_state": {
+                                    "label": "Číselná hodnota",
+                                    "above": "Nad",
+                                    "below": "Pod",
+                                    "value_template": "Šablóna hodnoty (voliteľné)"
+                                },
+                                "sun": {
+                                    "label": "Slnko",
+                                    "event": "Udalosť:",
+                                    "sunrise": "Východ slnka",
+                                    "sunset": "Západ slnka",
+                                    "offset": "Kompenzácia (voliteľné)"
+                                },
+                                "template": {
+                                    "label": "Šablóna",
+                                    "value_template": "Šablóna hodnoty"
+                                },
+                                "time": {
+                                    "label": "Čas",
+                                    "at": "Čas o"
+                                },
+                                "zone": {
+                                    "label": "Zóna",
+                                    "entity": "Entita s umiestnením",
+                                    "zone": "Zóna",
+                                    "event": "Udalosť:",
+                                    "enter": "Vstúpenie",
+                                    "leave": "Opustenie"
+                                },
+                                "webhook": {
+                                    "label": "Webhook",
+                                    "webhook_id": "Webhook ID"
+                                },
+                                "time_pattern": {
+                                    "label": "Časový vzor",
+                                    "hours": "Hodín",
+                                    "minutes": "Minút",
+                                    "seconds": "Sekúnd"
+                                },
+                                "geo_location": {
+                                    "label": "Geolokácia",
+                                    "source": "Zdroj",
+                                    "zone": "Zóna",
+                                    "event": "Udalosť:",
+                                    "leave": "Opustiť"
+                                }
+                            },
+                            "learn_more": "Získajte viac informácií o spúšťačoch"
+                        },
+                        "conditions": {
+                            "header": "Podmienky",
+                            "introduction": "Podmienky sú voliteľnou súčasťou pravidla automatizácie a môžu sa použiť na zabránenie tomu, aby sa akcia vykonala pri spustení. Podmienky vyzerajú veľmi podobne ako spúšťače, ale sú veľmi odlišné. Spúšťač sa zameria na udalosti, ktoré sa dejú v systéme, zatiaľ čo podmienka sa zameriava iba na to, ako systém práve vyzerá. Spúšťač môže pozorovať, že je zapnutý spínač. Podmienkou je iba to, či je vypínač v súčasnosti zapnutý alebo vypnutý. \n\n [Viac informácií o podmienkach.](https:\/\/home-assistant.io\/docs\/scripts\/conditions\/)",
+                            "add": "Pridať podmienku",
+                            "duplicate": "Duplikovať",
+                            "delete": "Odstrániť",
+                            "delete_confirm": "Ste si istý odstránením ? ",
+                            "unsupported_condition": "Nepodporovaná podmienka: {condition}",
+                            "type_select": "Typ podmienky",
+                            "type": {
+                                "state": {
+                                    "label": "Stav",
+                                    "state": "Stav"
+                                },
+                                "numeric_state": {
+                                    "label": "Číselná hodnota",
+                                    "above": "Nad",
+                                    "below": "Pod",
+                                    "value_template": "Šablóna hodnoty (voliteľné)"
+                                },
+                                "sun": {
+                                    "label": "Slnko",
+                                    "before": "Pred:",
+                                    "after": "Po:",
+                                    "before_offset": "Predstih pred (voliteľné)",
+                                    "after_offset": "Oneskorenie po (voliteľné)",
+                                    "sunrise": "Východ slnka",
+                                    "sunset": "Západ slnka"
+                                },
+                                "template": {
+                                    "label": "Šablóna",
+                                    "value_template": "Šablóna hodnoty"
+                                },
+                                "time": {
+                                    "label": "Čas",
+                                    "after": "Po",
+                                    "before": "Pred"
+                                },
+                                "zone": {
+                                    "label": "Zóna",
+                                    "entity": "Entita s umiestnením",
+                                    "zone": "Zóna"
+                                }
+                            },
+                            "learn_more": "Získajte viac informácií o podmienkach"
+                        },
+                        "actions": {
+                            "header": "Akcie",
+                            "introduction": "Akcie, ktoré vykoná Home Assistant, sa aktivujú po spustení automatizácie. \n\n [Viac informácií o akciách.](https:\/\/home-assistant.io\/docs\/automation\/action\/)",
+                            "add": "Pridať akciu",
+                            "duplicate": "Duplikovať",
+                            "delete": "Odstrániť",
+                            "delete_confirm": "Ste si istý odstránením ? ",
+                            "unsupported_action": "Nepodporovaná akcia: {action}",
+                            "type_select": "Typ akcie",
+                            "type": {
+                                "service": {
+                                    "label": "Zavolať službu",
+                                    "service_data": "Dáta služby"
+                                },
+                                "delay": {
+                                    "label": "Oneskorenie",
+                                    "delay": "Oneskorenie"
+                                },
+                                "wait_template": {
+                                    "label": "Čakať",
+                                    "wait_template": "Šablóna čakania",
+                                    "timeout": "Časový limit (voliteľné)"
+                                },
+                                "condition": {
+                                    "label": "Podmienka"
+                                },
+                                "event": {
+                                    "label": "Odpáliť udalosť",
+                                    "event": "Udalosť:",
+                                    "service_data": "Dáta služby"
+                                }
+                            },
+                            "learn_more": "Získajte viac informácií o akciách"
+                        }
+                    }
+                },
+                "script": {
+                    "caption": "Skript",
+                    "description": "Vytvárajte a upravujte skripty"
+                },
+                "zwave": {
+                    "caption": "Z-Wave",
+                    "description": "Spravujte svoju Z-Wave sieť"
+                },
+                "users": {
+                    "caption": "Používatelia",
+                    "description": "Správa používateľov",
+                    "picker": {
+                        "title": "Používatelia"
+                    },
+                    "editor": {
+                        "rename_user": "Premenovať používateľa",
+                        "change_password": "Zmeniť heslo",
+                        "activate_user": "Aktivovať používateľa",
+                        "deactivate_user": "Deaktivovať používateľa",
+                        "delete_user": "Vymazať používateľa",
+                        "caption": "Zobraziť používateľa"
+                    },
+                    "add_user": {
+                        "caption": "Pridať používateľa",
+                        "name": "Meno",
+                        "username": "Užívateľské meno",
+                        "password": "Heslo",
+                        "create": "Vytvoriť"
+                    }
+                },
+                "cloud": {
+                    "caption": "Home Assistant Cloud",
+                    "description_login": "Prihlásený ako {email}",
+                    "description_not_login": "Neprihlásený"
+                },
+                "integrations": {
+                    "caption": "Integrácie",
+                    "description": "Spravovať pripojené zariadenia a služby",
+                    "discovered": "Objavené",
+                    "configured": "Nakonfigurovaný",
+                    "new": "Nastaviť novú integráciu",
+                    "configure": "Konfigurovať",
+                    "none": "Nič zatiaľ nebolo nakonfigurované",
+                    "config_entry": {
+                        "no_devices": "Táto integrácia nemá žiadne zariadenia.",
+                        "no_device": "Entity bez zariadení",
+                        "delete_confirm": "Naozaj chcete odstrániť túto integráciu?",
+                        "restart_confirm": "Ak chcete dokončiť odstránenie tejto integrácie, reštartujte Home Assistant",
+                        "manuf": "od {manufacturer}",
+                        "hub": "Pripojené cez",
+                        "firmware": "Firmvér: {version}",
+                        "device_unavailable": "zariadenie nie je k dispozícii",
+                        "entity_unavailable": "entita nie je k dispozícii",
+                        "no_area": "Žiadna oblasť"
+                    }
+                },
+                "zha": {
+                    "caption": "ZHA",
+                    "description": "Správa siete ZigBee Home Automation",
+                    "services": {
+                        "updateDeviceName": "Nastavte vlastný názov pre toto zariadenie v registri zariadenia."
+                    },
+                    "device_card": {
+                        "area_picker_label": "Oblasť"
+                    }
+                },
+                "area_registry": {
+                    "caption": "Register oblastí",
+                    "description": "Prehľad všetkých oblastí vo vašej domácnosti.",
+                    "picker": {
+                        "header": "Register oblastí",
+                        "integrations_page": "Stránka Integrácie",
+                        "no_areas": "Vyzerá to, že ešte nemáte žiadne oblasti!",
+                        "create_area": "VYTVORIŤ OBLASŤ"
+                    },
+                    "no_areas": "Vyzerá to, že ešte nemáte žiadne oblasti!",
+                    "create_area": "VYTVORIŤ OBLASŤ",
+                    "editor": {
+                        "default_name": "Nová oblasť",
+                        "delete": "VYMAZAŤ",
+                        "update": "AKTUALIZOVAŤ",
+                        "create": "VYTVORIŤ"
+                    }
+                },
+                "entity_registry": {
+                    "caption": "Register entít",
+                    "description": "Prehľad všetkých známych entít.",
+                    "picker": {
+                        "header": "Register entít",
+                        "unavailable": "(nedostupné)",
+                        "integrations_page": "Stránka Integrácie"
+                    },
+                    "editor": {
+                        "unavailable": "Táto entita nie je momentálne k dispozícii.",
+                        "default_name": "Nová oblasť",
+                        "delete": "VYMAZAŤ",
+                        "update": "AKTUALIZOVAŤ"
+                    }
+                },
+                "person": {
+                    "caption": "Osoby",
+                    "description": "Spravujte osoby, ktoré Home Assistant sleduje.",
+                    "detail": {
+                        "name": "Meno",
+                        "device_tracker_intro": "Vyberte zariadenia, ktoré patria tejto osobe.",
+                        "device_tracker_picked": "Sledovať zariadenie",
+                        "device_tracker_pick": "Vyberte zariadenie na sledovanie"
+                    }
+                }
+            },
+            "profile": {
+                "push_notifications": {
+                    "header": "Push upozornenia",
+                    "description": "Posielať upozornenia na toto zariadenie.",
+                    "error_load_platform": "Konfigurujte upozornenia notify.html5.",
+                    "error_use_https": "Vyžaduje zapnuté SSL pre rozhranie.",
+                    "push_notifications": "Push upozornenia",
+                    "link_promo": "Viac informácií"
+                },
+                "language": {
+                    "header": "Jazyk",
+                    "link_promo": "Pomôžte s prekladom",
+                    "dropdown_label": "Jazyk"
+                },
+                "themes": {
+                    "header": "Téma",
+                    "error_no_theme": "Nie sú k dispozícii žiadne témy.",
+                    "link_promo": "Získajte viac informácií o témach",
+                    "dropdown_label": "Téma"
+                },
+                "refresh_tokens": {
+                    "header": "Obnovovacie Tokeny",
+                    "description": "Každý obnovovací token predstavuje prihlásenú reláciu. Obnovovacie tokeny sa po kliknutí na tlačidlo Odhlásiť sa automaticky odstránia. Pre váš účet sú aktívne nasledovné obnovovacie tokeny.",
+                    "token_title": "Obnovovací token pre {clientId}",
+                    "created_at": "Vytvorený {date}",
+                    "confirm_delete": "Naozaj chcete odstrániť obnovovací token pre {name}?",
+                    "delete_failed": "Nepodarilo sa odstrániť obnovovací token",
+                    "last_used": "Naposledy použitý {date} z {location}",
+                    "not_used": "Nikdy nebol použitý",
+                    "current_token_tooltip": "Nedá sa odstrániť aktuálny obnovovací token"
+                },
+                "long_lived_access_tokens": {
+                    "header": "Prístupové tokeny s dlhou životnosťou",
+                    "description": "Vytvorte prístupové tokeny s dlhou životnosťou, ktoré umožnia vašim skriptom komunikovať s vašou inštanciou Home Assistant. Každý token bude platný 10 rokov od vytvorenia. Nasledujúce prístupové tokeny s dlhou životnosťou sú v súčasnosti aktívne.",
+                    "learn_auth_requests": "Zistite, ako vytvárať overené požiadavky.",
+                    "created_at": "Vytvorený {date}",
+                    "confirm_delete": "Naozaj chcete odstrániť prístupový token pre {name}?",
+                    "delete_failed": "Nepodarilo sa odstrániť prístupový token.",
+                    "create": "Vytvoriť Token",
+                    "create_failed": "Nepodarilo sa vytvoriť prístupový token.",
+                    "prompt_name": "Názov?",
+                    "prompt_copy_token": "Skopírujte svoj nový prístupový token. Znova sa nezobrazí.",
+                    "empty_state": "Nemáte žiadne prístupové tokeny s dlhou životnosťou.",
+                    "last_used": "Naposledy použitý {date} z {location}",
+                    "not_used": "Nikdy nebol použitý"
+                },
+                "current_user": "Momentálne ste prihlásení ako {fullName}.",
+                "is_owner": "Ste vlastníkom.",
+                "logout": "Odhlásiť sa",
+                "change_password": {
+                    "header": "Zmena hesla",
+                    "current_password": "Aktuálne heslo",
+                    "new_password": "Nové heslo",
+                    "confirm_new_password": "Potvrďte nové heslo",
+                    "error_required": "Požadované",
+                    "submit": "Odoslať"
+                },
+                "mfa": {
+                    "header": "Multifaktorové autentifikačné moduly",
+                    "disable": "Zakázať",
+                    "enable": "Povoliť",
+                    "confirm_disable": "Naozaj chcete zakázať {name}?"
+                },
+                "mfa_setup": {
+                    "title_aborted": "Prerušené",
+                    "title_success": "Úspech!",
+                    "step_done": "Nastavenie dokončené krok {step}",
+                    "close": "Zavrieť",
+                    "submit": "Odoslať"
+                }
+            },
+            "page-authorize": {
+                "initializing": "Inicializácia",
+                "authorizing_client": "Chystáte sa poskytnúť {clientId} prístup k vašej inštancii Home Assistantu.",
+                "logging_in_with": "Prihlasovanie pomocou **{authProviderName}**.",
+                "pick_auth_provider": "Alebo sa prihláste prostredníctvom",
+                "abort_intro": "Prihlásenie bolo zrušené",
+                "form": {
+                    "working": "Prosím čakajte",
+                    "unknown_error": "Niečo sa pokazilo",
+                    "providers": {
+                        "homeassistant": {
+                            "step": {
+                                "init": {
+                                    "data": {
+                                        "username": "Používateľské meno",
+                                        "password": "Heslo"
+                                    }
+                                },
+                                "mfa": {
+                                    "data": {
+                                        "code": "Kód dvojfaktorovej autentifikácie"
+                                    },
+                                    "description": "Otvorte **{mfa_module_name}** v zariadení, aby ste si pozreli svoj dvojfaktorový autentifikačný kód a overili svoju totožnosť:"
+                                }
+                            },
+                            "error": {
+                                "invalid_auth": "Nesprávne používateľské meno alebo heslo",
+                                "invalid_code": "Neplatný overovací kód"
+                            },
+                            "abort": {
+                                "login_expired": "Platnosť relácie skončila, prosím prihláste znova."
+                            }
+                        },
+                        "legacy_api_password": {
+                            "step": {
+                                "init": {
+                                    "data": {
+                                        "password": "Heslo API rozhrania"
+                                    },
+                                    "description": "Prosím zadajte heslo API rozhrania v konfigurácií http:"
+                                },
+                                "mfa": {
+                                    "data": {
+                                        "code": "Kód dvojfaktorovej autentifikácie"
+                                    },
+                                    "description": "Otvorte **{mfa_module_name}** na vašom zariadení a pozrite si kód dvojfaktorovej autentifikácie a overte svoju totožnosť."
+                                }
+                            },
+                            "error": {
+                                "invalid_auth": "Neplatné heslo rozhrania API",
+                                "invalid_code": "Neplatný autentifikačný kód"
+                            },
+                            "abort": {
+                                "no_api_password_set": "Nemáte nakonfigurované heslo rozhrania API.",
+                                "login_expired": "Relácia vypršala, prosím prihláste sa znova."
+                            }
+                        },
+                        "trusted_networks": {
+                            "step": {
+                                "init": {
+                                    "data": {
+                                        "user": "Používateľ"
+                                    },
+                                    "description": "Välj en användare att logga in som:"
+                                }
+                            },
+                            "abort": {
+                                "not_whitelisted": "Váš počítač nie je v zozname povolených zariadení."
+                            }
+                        },
+                        "command_line": {
+                            "step": {
+                                "init": {
+                                    "data": {
+                                        "username": "Používateľské meno",
+                                        "password": "Heslo"
+                                    }
+                                },
+                                "mfa": {
+                                    "data": {
+                                        "code": "2-faktorový autentifikačný kód"
+                                    }
+                                }
+                            },
+                            "error": {
+                                "invalid_auth": "Nesprávne používateľské meno alebo heslo",
+                                "invalid_code": "Nesprávny autentifikačný kód"
+                            },
+                            "abort": {
+                                "login_expired": "Relácia vypršala, prihláste sa prosím znova"
+                            }
+                        }
+                    }
+                }
+            },
+            "page-onboarding": {
+                "intro": "Ste pripravení prebudiť váš domov, získať vaše súkromie  a pripojiť sa k celosvetovej komunite bastličov?",
+                "user": {
+                    "intro": "Poďme začať vytvorením používateľského konta.",
+                    "required_field": "Požadované",
+                    "data": {
+                        "name": "Meno",
+                        "username": "Používateľské meno",
+                        "password": "Heslo",
+                        "password_confirm": "Potvrďte nové heslo"
+                    },
+                    "create_account": "Vytvoriť účet",
+                    "error": {
+                        "required_fields": "Vyplňte všetky povinné polia",
+                        "password_not_match": "Heslá sa nezhodujú"
+                    }
+                }
+            },
+            "lovelace": {
+                "cards": {
+                    "shopping-list": {
+                        "checked_items": "Označené položky",
+                        "clear_items": "Vymazať označené položky",
+                        "add_item": "Pridať položku"
+                    },
+                    "empty_state": {
+                        "title": "Vitajte doma",
+                        "go_to_integrations_page": "Prejsť na stránku integrácií"
+                    }
+                },
+                "editor": {
+                    "edit_card": {
+                        "header": "Konfigurácia karty",
+                        "save": "Uložiť",
+                        "toggle_editor": "Prepnúť editor",
+                        "pick_card": "Vyberte kartu, ktorú chcete pridať.",
+                        "add": "Pridať kartu",
+                        "edit": "Upraviť",
+                        "delete": "Odstrániť",
+                        "move": "Presunúť"
+                    },
+                    "migrate": {
+                        "header": "Nekompatibilná konfigurácia",
+                        "para_no_id": "Tento prvok nemá žiadne ID. Doplňte, prosím, ID pre tento prvok v súbore 'ui-lovelace.yaml'.",
+                        "para_migrate": "Home Assistant môže automaticky pridať identifikátory pre všetky vaše karty a zobrazenia, keď kliknete na tlačidlo 'Migrovať konfiguráciu'.",
+                        "migrate": "Migrovať konfiguráciu"
+                    },
+                    "header": "Upraviť používateľské rozhranie",
+                    "edit_view": {
+                        "header": "Konfigurácia zobrazenia",
+                        "add": "Pridať zobrazenie",
+                        "edit": "Upraviť zobrazenie",
+                        "delete": "Odstrániť zobrazenie"
+                    },
+                    "save_config": {
+                        "header": "Prevziať kontrolu rozhrania Lovelace",
+                        "para": "Štandardne bude Home Assistant udržiavať vaše používateľské rozhranie a aktualizovať ho, keď budú k dispozícii nové entity alebo komponenty rozhrania Lovelace. Ak prevezmete kontrolu, už za vás nebudeme automaticky robiť zmeny.",
+                        "para_sure": "Skutočne chcete prevziať kontrolu vášho používateľského rozhrania?",
+                        "cancel": "Zrušiť",
+                        "save": "Prevziať kontrolu"
+                    },
+                    "menu": {
+                        "raw_editor": "Raw editor konfigurácie"
+                    },
+                    "raw_editor": {
+                        "header": "Upraviť konfiguráciu",
+                        "save": "Uložiť",
+                        "unsaved_changes": "Neuložené zmeny",
+                        "saved": "Uložené"
+                    }
+                },
+                "menu": {
+                    "configure_ui": "Konfigurovať používateľské rozhranie",
+                    "unused_entities": "Nepoužité entity",
+                    "help": "Pomoc",
+                    "refresh": "Obnoviť"
+                },
+                "warning": {
+                    "entity_not_found": "Entita nie je k dispozícií",
+                    "entity_non_numeric": "Entita je nečíselná: {entity}"
+                }
+            }
+        },
+        "sidebar": {
+            "log_out": "Odhlásiť sa",
+            "developer_tools": "Vývojárske nástroje"
+        },
+        "common": {
+            "loading": "Načítava sa",
+            "cancel": "Zrušiť",
+            "save": "Uložiť"
+        },
+        "duration": {
+            "day": "{count} {count, plural,\none {deň}\nfew {dni}\nother {dní}\n}",
+            "week": "{count} {count, plural,\none {týždeň}\nfew {týždne}\nother {týždňov}\n}",
+            "second": "{count} {count, plural,\none {sekunda}\nfew {sekundy}\nother {sekúnd}\n}",
+            "minute": "{count} {count, plural,\none {minúta}\nother {minút}\n}",
+            "hour": "{count} {count, plural,\n  one {hodina}\n  other {hodiny}\n}"
+        },
+        "login-form": {
+            "password": "Heslo",
+            "remember": "Zapamätať",
+            "log_in": "Prihlásiť sa"
+        },
+        "card": {
+            "camera": {
+                "not_available": "Obrázok nie je k dispozícii"
+            },
+            "persistent_notification": {
+                "dismiss": "Zrušiť"
+            },
+            "scene": {
+                "activate": "Aktivovať"
+            },
+            "script": {
+                "execute": "Vykonať"
+            },
+            "weather": {
+                "attributes": {
+                    "air_pressure": "Tlak vzduchu",
+                    "humidity": "Vlhkosť",
+                    "temperature": "Teplota",
+                    "visibility": "Viditeľnosť",
+                    "wind_speed": "Rýchlosť vetra"
+                },
+                "cardinal_direction": {
+                    "e": "V",
+                    "ene": "VSV",
+                    "ese": "VJV",
+                    "n": "S",
+                    "ne": "SV",
+                    "nne": "SSV",
+                    "nw": "SZ",
+                    "nnw": "SSZ",
+                    "s": "J",
+                    "se": "JV",
+                    "sse": "JJV",
+                    "ssw": "JJZ",
+                    "sw": "JZ",
+                    "w": "Z",
+                    "wnw": "ZSZ",
+                    "wsw": "ZJZ"
+                },
+                "forecast": "Predpoveď"
+            },
+            "alarm_control_panel": {
+                "code": "Kód",
+                "clear_code": "Zrušiť",
+                "disarm": "Odkódovať",
+                "arm_home": "Zakódovať doma",
+                "arm_away": "Zakódovať odchod",
+                "arm_night": "Zakódovať na noc",
+                "armed_custom_bypass": "Prispôsobené vylúčenie"
+            },
+            "automation": {
+                "last_triggered": "Naposledy spustené",
+                "trigger": "Spustiť"
+            },
+            "cover": {
+                "position": "Poloha",
+                "tilt_position": "Poloha sklonu"
+            },
+            "fan": {
+                "speed": "Rýchlosť",
+                "oscillate": "Pohyblivý smer",
+                "direction": "Smer"
+            },
+            "light": {
+                "brightness": "Jas",
+                "color_temperature": "Teplota farby",
+                "white_value": "Hodnota bielej",
+                "effect": "Efekt"
+            },
+            "media_player": {
+                "text_to_speak": "Text, ktorý chcete hovoriť",
+                "source": "Zdroj",
+                "sound_mode": "Režim zvuku"
+            },
+            "climate": {
+                "currently": "Aktuálne",
+                "on_off": "Zapnúť \/ vypnúť",
+                "target_temperature": "Cieľová teplota",
+                "target_humidity": "Cieľová vlhkosť",
+                "operation": "Prevádzka",
+                "fan_mode": "Režim ventilátora",
+                "swing_mode": "Vejárový režim",
+                "away_mode": "Režim neprítomnosti",
+                "aux_heat": "Prídavné kúrenie"
+            },
+            "lock": {
+                "code": "Kód",
+                "lock": "Zamknúť",
+                "unlock": "Odomknúť"
+            },
+            "vacuum": {
+                "actions": {
+                    "resume_cleaning": "Pokračovať v čistení",
+                    "return_to_base": "Návrat do doku",
+                    "start_cleaning": "Začať čistenie",
+                    "turn_on": "Zapnúť",
+                    "turn_off": "Vypnúť"
+                }
+            },
+            "water_heater": {
+                "currently": "Aktuálne",
+                "on_off": "Zapnúť \/ vypnúť",
+                "target_temperature": "Cieľová teplota",
+                "operation": "V prevádzke",
+                "away_mode": "Režim neprítomnosti"
+            }
+        },
+        "components": {
+            "entity": {
+                "entity-picker": {
+                    "entity": "Entita"
+                }
+            },
+            "service-picker": {
+                "service": "Služba"
+            },
+            "relative_time": {
+                "past": "Pred {time}",
+                "future": "O {time}",
+                "never": "Nikdy",
+                "duration": {
+                    "second": "{count} {count, plural,\none {sekunda}\nother {sekúnd}\n}",
+                    "minute": "{count} {count, plural,\none {minúta}\nother {minút}\n}",
+                    "hour": "{count} {count, plural,\n  one {hodina}\n  other {hodiny}\n}",
+                    "day": "{count} {count, plural,\none {deň}\nother {dní}\n}",
+                    "week": "{count} {count, plural,\none {týždeň}\nother {týždne}\n}"
+                }
+            },
+            "history_charts": {
+                "loading_history": "Načítavam históriu stavov",
+                "no_history_found": "Nenašla sa žiadna história stavov"
+            }
+        },
+        "notification_toast": {
+            "entity_turned_on": "Zapnuté {entity}.",
+            "entity_turned_off": "Vypnuté {entity}.",
+            "service_called": "Služba {service} zavolaná.",
+            "service_call_failed": "Nepodarilo sa zavolať službu {service}.",
+            "connection_lost": "Prerušené spojenie. Opätovné pripájanie..."
+        },
+        "dialogs": {
+            "more_info_settings": {
+                "save": "Uložiť",
+                "name": "Prepísať názov",
+                "entity_id": "Entity ID"
+            },
+            "more_info_control": {
+                "script": {
+                    "last_action": "Posledná akcia"
+                },
+                "sun": {
+                    "elevation": "Nadmorská výška",
+                    "rising": "Vychádzajúce",
+                    "setting": "Zapadajúce"
+                },
+                "updater": {
+                    "title": "Pokyny pre aktualizáciu"
+                }
+            }
+        },
+        "auth_store": {
+            "ask": "Chcete tieto prihlasovacie údaje uložiť?",
+            "decline": "Nie ďakujem",
+            "confirm": "Uložiť prihlasovacie údaje"
+        },
+        "notification_drawer": {
+            "click_to_configure": "Kliknutím na tlačidlo nakonfigurujete {entity}",
+            "empty": "Žiadne upozornenia",
+            "title": "Upozornenia"
+        }
+    },
+    "domain": {
+        "alarm_control_panel": "Ovládací panel alarmu",
+        "automation": "Automatizácia",
+        "binary_sensor": "Binárny senzor",
+        "calendar": "Kalendár",
+        "camera": "Kamera",
+        "climate": "Klimatizácia",
+        "configurator": "Konfigurátor",
+        "conversation": "Konverzácia",
+        "cover": "Kryt",
+        "device_tracker": "Sledovanie zariadenia",
+        "fan": "Ventilátor",
+        "history_graph": "Graf histórie",
+        "group": "Skupina",
+        "image_processing": "Spracovanie obrazu",
+        "input_boolean": "Logický vstup",
+        "input_datetime": "Vstupný dátum a čas",
+        "input_select": "Výber z možností",
+        "input_number": "Číselný vstup",
+        "input_text": "Vstupný text",
+        "light": "Svetlo",
+        "lock": "Zámok",
+        "mailbox": "Poštová schránka",
+        "media_player": "Prehrávač médií",
+        "notify": "Upozornenie",
+        "plant": "Rastlina",
+        "proximity": "Blízkosť",
+        "remote": "Diaľkové ovládanie",
+        "scene": "Scéna",
+        "script": "Skript",
+        "sensor": "Senzor",
+        "sun": "Slnko",
+        "switch": "Prepínač",
+        "updater": "Aktualizátor",
+        "weblink": "Webový odkaz",
+        "zwave": "Z-Wave",
+        "vacuum": "Vysávač",
+        "zha": "ZHA",
+        "hassio": "Hass.io",
+        "homeassistant": "Home Assistant",
+        "lovelace": "Lovelace",
+        "person": "Osoba"
+    },
+    "attribute": {
+        "weather": {
+            "humidity": "Vlhkosť",
+            "visibility": "Viditeľnosť",
+            "wind_speed": "Rýchlosť vetra"
+        }
+    },
+    "groups": {
+        "system-admin": "Správcovia",
+        "system-users": "Používatelia"
+    }
+}

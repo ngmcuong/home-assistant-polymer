@@ -1,0 +1,1174 @@
+{
+    "panel": {
+        "config": "Konfigurasjon",
+        "states": "Oversikt",
+        "map": "Kart",
+        "logbook": "Loggbok",
+        "history": "Historie",
+        "mailbox": "Postkasse",
+        "shopping_list": "Handleliste",
+        "dev-services": "Tenester",
+        "dev-states": "Statusar",
+        "dev-events": "Hendingar",
+        "dev-templates": "Malar",
+        "dev-mqtt": "MQTT",
+        "dev-info": "Info",
+        "calendar": "Kalendrar",
+        "profile": "Profil"
+    },
+    "state": {
+        "default": {
+            "off": "Av",
+            "on": "På",
+            "unknown": "Ukjent",
+            "unavailable": "Utilgjengelig"
+        },
+        "alarm_control_panel": {
+            "armed": "Påslått",
+            "disarmed": "Avslått",
+            "armed_home": "På for heime",
+            "armed_away": "På for borte",
+            "armed_night": "På for natta",
+            "pending": "I vente av",
+            "arming": "Skrur på",
+            "disarming": "Skrur av",
+            "triggered": "Utløyst",
+            "armed_custom_bypass": "Armert tilpassa unntak"
+        },
+        "automation": {
+            "off": "Av",
+            "on": "På"
+        },
+        "binary_sensor": {
+            "default": {
+                "off": "Av",
+                "on": "På"
+            },
+            "moisture": {
+                "off": "Tørr",
+                "on": "Våt"
+            },
+            "gas": {
+                "off": "Ikkje oppdaga",
+                "on": "Oppdaga"
+            },
+            "motion": {
+                "off": "Ikkje oppdaga",
+                "on": "Oppdaga"
+            },
+            "occupancy": {
+                "off": "Ikkje oppdaga",
+                "on": "Oppdaga"
+            },
+            "smoke": {
+                "off": "Ikkje oppdaga",
+                "on": "Oppdaga"
+            },
+            "sound": {
+                "off": "Ikkje oppdaga",
+                "on": "Oppdaga"
+            },
+            "vibration": {
+                "off": "Ikkje oppdaga",
+                "on": "Oppdaga"
+            },
+            "opening": {
+                "off": "Lukka",
+                "on": "Open"
+            },
+            "safety": {
+                "off": "Sikker",
+                "on": "Usikker"
+            },
+            "presence": {
+                "off": "Borte",
+                "on": "Heime"
+            },
+            "battery": {
+                "off": "Normalt",
+                "on": "Lågt"
+            },
+            "problem": {
+                "off": "Ok",
+                "on": "Problem"
+            },
+            "connectivity": {
+                "off": "Fråkopla",
+                "on": "Tilkopla"
+            },
+            "cold": {
+                "off": "Normal",
+                "on": "Kald"
+            },
+            "door": {
+                "off": "Lukka",
+                "on": "Open"
+            },
+            "garage_door": {
+                "off": "Lukka",
+                "on": "Open"
+            },
+            "heat": {
+                "off": "Normal",
+                "on": "Varm"
+            },
+            "window": {
+                "off": "Lukka",
+                "on": "Open"
+            },
+            "lock": {
+                "off": "Låst",
+                "on": "Ulåst"
+            }
+        },
+        "calendar": {
+            "off": "Av",
+            "on": "På"
+        },
+        "camera": {
+            "recording": "Opptak",
+            "streaming": "Strøymer",
+            "idle": "Inaktiv"
+        },
+        "climate": {
+            "off": "Av",
+            "on": "På",
+            "heat": "Varme",
+            "cool": "Kjøle",
+            "idle": "Inaktiv",
+            "auto": "Auto",
+            "dry": "Tørr",
+            "fan_only": "Berre vifte",
+            "eco": "Øko",
+            "electric": "Elektrisk",
+            "performance": "Yting",
+            "high_demand": "Høg etterspurnad",
+            "heat_pump": "Varmepumpe",
+            "gas": "Gass",
+            "manual": "Handbok"
+        },
+        "configurator": {
+            "configure": "Konfigurerer",
+            "configured": "Konfigurert"
+        },
+        "cover": {
+            "open": "Open",
+            "opening": "Opnar",
+            "closed": "Lukka",
+            "closing": "Lukkar",
+            "stopped": "Stoppa"
+        },
+        "device_tracker": {
+            "home": "Heime",
+            "not_home": "Borte"
+        },
+        "fan": {
+            "off": "Av",
+            "on": "På"
+        },
+        "group": {
+            "off": "Av",
+            "on": "På",
+            "home": "Heime",
+            "not_home": "Borte",
+            "open": "Open",
+            "opening": "Opnar",
+            "closed": "Lukka",
+            "closing": "Lukkar",
+            "stopped": "Stoppa",
+            "locked": "Låst",
+            "unlocked": "Ulåst",
+            "ok": "Ok",
+            "problem": "Problem"
+        },
+        "input_boolean": {
+            "off": "Av",
+            "on": "På"
+        },
+        "light": {
+            "off": "Av",
+            "on": "På"
+        },
+        "lock": {
+            "locked": "Låst",
+            "unlocked": "Ulåst"
+        },
+        "media_player": {
+            "off": "Av",
+            "on": "På",
+            "playing": "Spelar",
+            "paused": "Pausa",
+            "idle": "Inaktiv",
+            "standby": "Avventer"
+        },
+        "plant": {
+            "ok": "Ok",
+            "problem": "Problem"
+        },
+        "remote": {
+            "off": "Av",
+            "on": "På"
+        },
+        "scene": {
+            "scening": "Scenande"
+        },
+        "script": {
+            "off": "Av",
+            "on": "På"
+        },
+        "sensor": {
+            "off": "Av",
+            "on": "På "
+        },
+        "sun": {
+            "above_horizon": "Over horisonten",
+            "below_horizon": "Under horisonten"
+        },
+        "switch": {
+            "off": "Av",
+            "on": "På"
+        },
+        "zwave": {
+            "default": {
+                "initializing": "Initialiserer",
+                "dead": "Død",
+                "sleeping": "Søv",
+                "ready": "Klar"
+            },
+            "query_stage": {
+                "initializing": "Initialiserer ({query_stage})",
+                "dead": "Dau ({query_stage})"
+            }
+        },
+        "weather": {
+            "clear-night": "Klart, natt",
+            "cloudy": "Overskya",
+            "fog": "Tåke",
+            "hail": "Hagl",
+            "lightning": "Lyn",
+            "lightning-rainy": "Lyn, regn",
+            "partlycloudy": "Delvis overskya",
+            "pouring": "Pøsande",
+            "rainy": "Regn",
+            "snowy": "Snø",
+            "snowy-rainy": "Snø, regn",
+            "sunny": "Mykje sol",
+            "windy": "Vind",
+            "windy-variant": "Vind"
+        },
+        "vacuum": {
+            "cleaning": "Reingjer",
+            "docked": "Parkert",
+            "error": "Feil",
+            "idle": "Tomgang",
+            "off": "Av",
+            "on": "På",
+            "paused": "Pausa",
+            "returning": "Gå tilbake til ladestasjonen"
+        },
+        "timer": {
+            "active": "aktiv",
+            "idle": "tomgang",
+            "paused": "pausa"
+        },
+        "person": {
+            "home": "Heime",
+            "not_home": "Borte "
+        }
+    },
+    "state_badge": {
+        "default": {
+            "unknown": "Ukjent",
+            "unavailable": "Utilgjengeleg",
+            "error": "Feil"
+        },
+        "alarm_control_panel": {
+            "armed": "Påslått",
+            "disarmed": "Deaktiver",
+            "armed_home": "Påslått",
+            "armed_away": "Påslått",
+            "armed_night": "Påslått",
+            "pending": "Ventar",
+            "arming": "Slår på",
+            "disarming": "Slå av",
+            "triggered": "Utløys",
+            "armed_custom_bypass": "Påslått"
+        },
+        "device_tracker": {
+            "home": "Heime",
+            "not_home": "Borte"
+        },
+        "person": {
+            "home": "Heime",
+            "not_home": "Borte"
+        }
+    },
+    "ui": {
+        "panel": {
+            "shopping-list": {
+                "clear_completed": "Fjern fullført",
+                "add_item": "Legg til",
+                "microphone_tip": "Trykk på mikorfonen øvst til høgre og sei \"Add candy to my shopping list\""
+            },
+            "history": {
+                "showing_entries": "Viser oppføringer for",
+                "period": "Periode"
+            },
+            "logbook": {
+                "showing_entries": "Visar oppføringar for",
+                "period": "Periode"
+            },
+            "mailbox": {
+                "empty": "Du har ingen meldingar",
+                "playback_title": "Meldingsavspeling",
+                "delete_prompt": "Vil du slette denne meldinga?",
+                "delete_button": "Slett"
+            },
+            "config": {
+                "header": "Konfigurer Home Assistant",
+                "introduction": "Her er det mogleg å konfigurere dine komponenter og Home Assistant. Ikkje alt er mogleg å konfigurere frå brukarsnittet endå, men vi jobbar med saka.",
+                "core": {
+                    "caption": "Generelt",
+                    "description": "Valider konfigurasjonsfilen din og kontroller serveren",
+                    "section": {
+                        "core": {
+                            "header": "Konfigurasjon og serverkontroll",
+                            "introduction": "Vi veit at endringar i konfigurasjonen kan vere ein slitsam prosess. Denne delen vil forsøke å gjere livet ditt litt lettare.",
+                            "validation": {
+                                "heading": "Konfigurasjonsvalidering",
+                                "introduction": "Sjekk konfigurasjonen din dersom du nyleg har gjort endringar og ønsker å vere sikker på at den er gyldig ved å køyre ein valideringstest",
+                                "check_config": "Sjekk konfigurasjonen",
+                                "valid": "Konfigurasjonen er gyldig!",
+                                "invalid": "Konfigurasjonen er ikkje gyldig"
+                            },
+                            "reloading": {
+                                "heading": "Lastar konfigurasjon på nytt",
+                                "introduction": "Nokre delar av Home Assistant kan oppdaterast utan ein omstart. Ved å trykke på oppdater, vil Home Assistant forkaste den gjeldande konfigurasjonen og erstatte den med den nye.",
+                                "core": "Oppdater kjerna",
+                                "group": "Oppdater gruppene",
+                                "automation": "Oppdater automasjonane",
+                                "script": "Oppdater skripta"
+                            },
+                            "server_management": {
+                                "heading": "Serveradministrasjon",
+                                "introduction": "Kontroller Home Assistant-serveren din... frå Home Assistant.",
+                                "restart": "Omstart",
+                                "stop": "Stopp"
+                            }
+                        }
+                    }
+                },
+                "customize": {
+                    "caption": "Tilpassing",
+                    "description": "Tilpass dine einingar",
+                    "picker": {
+                        "header": "Tilpasning",
+                        "introduction": "Modifiser oppføringsattributtane. Dei nyleg lagt til\/endra endringane kjem til å bli sett til verks med ein gang. Fjerna endringar kjem i gang når oppføringa er oppdatert."
+                    }
+                },
+                "automation": {
+                    "caption": "Automasjon",
+                    "description": "Lag og rediger automasjonar",
+                    "picker": {
+                        "header": "Automasjonsredigeringa",
+                        "introduction": "Automasjonsredigeringa tillet deg å lage og redigere automasjonar. Ver vennleg og les [instruksjonane](https:\/\/home-assistant.io\/docs\/automation\/editor\/) for å vere sikker på om du har konfigurert Home Assistant rett.",
+                        "pick_automation": "Vel ein automasjon for å redigere",
+                        "no_automations": "Vi klarte ikkje å finne nokon automasjonar som kunne redigerast",
+                        "add_automation": "Legg til automasjon",
+                        "learn_more": "Lær meir om automasjonar"
+                    },
+                    "editor": {
+                        "introduction": "Bruk automasjonar til å gi liv til heimen din",
+                        "default_name": "Ny automasjon",
+                        "save": "Lagre",
+                        "unsaved_confirm": "Du har endringar som ikkje er lagra. Er du sikker på at du vil forlate?",
+                        "alias": "Namn",
+                        "triggers": {
+                            "header": "Utløysarar",
+                            "introduction": "Utløysarar er det som startar ein prosess i ein automasjonsregel. Det er mogleg å spesifisere fleire utløysarar for same regel. Når ein utløysar startar, vil Home Assistant validere føresetnadane, dersom der er nokon, og så setje i gang handlinga.\n\n[Lær meir om utløysarar.](https:\/\/home-assistant.io\/docs\/automation\/trigger\/)",
+                            "add": "Legg til utløysar",
+                            "duplicate": "Dupliser",
+                            "delete": "Slett",
+                            "delete_confirm": "Er du sikker på at du vil slette?",
+                            "unsupported_platform": "Ikkje støtta plattform: {platform}",
+                            "type_select": "Utløysartype",
+                            "type": {
+                                "event": {
+                                    "label": "Hending",
+                                    "event_type": "Hendingstype",
+                                    "event_data": "TIlstandsdata"
+                                },
+                                "state": {
+                                    "label": "Tilstand",
+                                    "from": "Frå",
+                                    "to": "Til",
+                                    "for": "For"
+                                },
+                                "homeassistant": {
+                                    "label": "Home Assistant",
+                                    "event": "Hending:",
+                                    "start": "Oppstart",
+                                    "shutdown": "Slå av"
+                                },
+                                "mqtt": {
+                                    "label": "MQTT",
+                                    "topic": "Emne",
+                                    "payload": "Nyttelast (valfritt)"
+                                },
+                                "numeric_state": {
+                                    "label": "Numerisk tilstand",
+                                    "above": "Over",
+                                    "below": "Under",
+                                    "value_template": "Verdimal (valfritt)"
+                                },
+                                "sun": {
+                                    "label": "Sol",
+                                    "event": "Hending:",
+                                    "sunrise": "Soloppgang",
+                                    "sunset": "Solnedgang",
+                                    "offset": "Utsetjing (valfritt)"
+                                },
+                                "template": {
+                                    "label": "Mal",
+                                    "value_template": "Verdimal"
+                                },
+                                "time": {
+                                    "label": "Tid",
+                                    "at": "Ved"
+                                },
+                                "zone": {
+                                    "label": "Sone",
+                                    "entity": "Eining med posisjon",
+                                    "zone": "Sone",
+                                    "event": "Hending:",
+                                    "enter": "Kjem",
+                                    "leave": "Forlet"
+                                },
+                                "webhook": {
+                                    "label": "Webhook",
+                                    "webhook_id": "Webhook ID"
+                                },
+                                "time_pattern": {
+                                    "label": "Tidsmønster",
+                                    "hours": "Timar",
+                                    "minutes": "Minutt",
+                                    "seconds": "Sekundar"
+                                },
+                                "geo_location": {
+                                    "label": "Geolokasjon",
+                                    "source": "Kjelde",
+                                    "zone": "Sone",
+                                    "event": "Hending:",
+                                    "enter": "Gå inn",
+                                    "leave": "Forlat"
+                                }
+                            },
+                            "learn_more": "Lær meir om utløysarar"
+                        },
+                        "conditions": {
+                            "header": "Føresetnadar",
+                            "introduction": "Føresetnadar er ein valfri del av automasjonsregelen og kan brukast til å hindre at ei handling vert gjennomført når den er utløyst. Føresetnadane liknar på utløysarane, men er veldig forskjellig frå dei. Ein utløysar vil sjå på hendingar som skjer i systemet, medan ein føresetnad berre ser på korleis systemet er akkuratt no. Ein utløysar kan observere at ein brytar blir skrudt på, medan ein føresetnad berre kan sjå om brytaren er på eller av. \n\n[Lær meir om føresetnadar.](https:\/\/home-assistant.io\/docs\/scripts\/conditions\/)",
+                            "add": "Legg til føresetnad",
+                            "duplicate": "Dupliser",
+                            "delete": "Slett",
+                            "delete_confirm": "Er du sikker på at du vil slette?",
+                            "unsupported_condition": "Ikkje støtta føresetnad: {condition}",
+                            "type_select": "Føresetnadstype",
+                            "type": {
+                                "state": {
+                                    "label": "Tilstand",
+                                    "state": "Tilstand"
+                                },
+                                "numeric_state": {
+                                    "label": "Numerisk tilstand",
+                                    "above": "Over",
+                                    "below": "Under",
+                                    "value_template": "Verdimal (valfritt)"
+                                },
+                                "sun": {
+                                    "label": "Sol",
+                                    "before": "Før:",
+                                    "after": "Etter:",
+                                    "before_offset": "Før utsetjing",
+                                    "after_offset": "Etter utsetjing",
+                                    "sunrise": "Soloppgang",
+                                    "sunset": "Solnedgang"
+                                },
+                                "template": {
+                                    "label": "Mal",
+                                    "value_template": "Verdimal"
+                                },
+                                "time": {
+                                    "label": "Tid",
+                                    "after": "Etter",
+                                    "before": "Før"
+                                },
+                                "zone": {
+                                    "label": "Sone",
+                                    "entity": "Eining med posisjon",
+                                    "zone": "Sone"
+                                }
+                            },
+                            "learn_more": "Lær meir om føresetnader"
+                        },
+                        "actions": {
+                            "header": "Handlingar",
+                            "introduction": "Handlinga Home Assistant vil gjennomføre når automasjonen vert utløyst.\n\n[Lær meir om handlingar.](https:\/\/home-assistant.io\/docs\/automation\/action\/)",
+                            "add": "Legg til handling",
+                            "duplicate": "Dupliser",
+                            "delete": "Slett",
+                            "delete_confirm": "Er du sikker på at du vil slette?",
+                            "unsupported_action": "Ikkje støtta handling: {action}",
+                            "type_select": "Handlingstype",
+                            "type": {
+                                "service": {
+                                    "label": "Hent teneste",
+                                    "service_data": "Tenestedata"
+                                },
+                                "delay": {
+                                    "label": "Forseinking",
+                                    "delay": "Forseinking"
+                                },
+                                "wait_template": {
+                                    "label": "Vent",
+                                    "wait_template": "Ventemal",
+                                    "timeout": "Tidsavbrot (valfritt)"
+                                },
+                                "condition": {
+                                    "label": "Føresetnad"
+                                },
+                                "event": {
+                                    "label": "Køyr hending",
+                                    "event": "Hending",
+                                    "service_data": "Tenestedata"
+                                }
+                            },
+                            "learn_more": "Lær meir om handlingar"
+                        }
+                    }
+                },
+                "script": {
+                    "caption": "Skript",
+                    "description": "Lag og rediger skript"
+                },
+                "zwave": {
+                    "caption": "Z-Wave",
+                    "description": "Administrer Z-Wave-nettverket ditt"
+                },
+                "users": {
+                    "caption": "Brukarar",
+                    "description": "Administrer brukarar",
+                    "picker": {
+                        "title": "Brukar"
+                    },
+                    "editor": {
+                        "rename_user": "Gi nytt namn til brukaren",
+                        "change_password": "Bytt passord",
+                        "activate_user": "Aktiver brukaren",
+                        "deactivate_user": "Deaktiver brukaren",
+                        "delete_user": "Slett brukar",
+                        "caption": "Sjå brukaren"
+                    },
+                    "add_user": {
+                        "caption": "Legg til brukar",
+                        "name": "Namn",
+                        "username": "Brukarnamn",
+                        "password": "Passord",
+                        "create": "Lag"
+                    }
+                },
+                "cloud": {
+                    "caption": "Home Assistant Cloud",
+                    "description_login": "Logga inn som {email}",
+                    "description_not_login": "Ikkje logga inn"
+                },
+                "integrations": {
+                    "caption": "Integrasjoner",
+                    "description": "Administrer tilkopla einingar og tenester",
+                    "discovered": "Oppdaga",
+                    "configured": "Konfigurer  ",
+                    "new": "Sett opp ein ny integrasjon",
+                    "configure": "Konfigurer",
+                    "none": "Ikkje noko konfiguert endå",
+                    "config_entry": {
+                        "no_devices": "Denne integrasjonen har ingen oppføringar",
+                        "no_device": "Oppføringar utan einingar",
+                        "delete_confirm": "Er du sikker på at du vil slette denne integrasjonen?",
+                        "restart_confirm": "Restart Home Assistant for å fjerne denne integrasjonen",
+                        "manuf": "av {manufacturer}",
+                        "hub": "Tilkopla via",
+                        "firmware": "Firmware: {version}",
+                        "device_unavailable": "Eininga utilgjengelig",
+                        "entity_unavailable": "Oppføringa utilgjengelig",
+                        "no_area": "Inga område"
+                    }
+                },
+                "zha": {
+                    "caption": "ZHA",
+                    "description": "Zigbee heimeautomasjon nettverksadministrering",
+                    "services": {
+                        "reconfigure": "Konfigurer ZHA-eininga (heal device) på nytt. Bruk dette om du har problem med eininga. Dersom eining går på batteri, ver sikker på at den er vaken og tek i mot kommandar når du brukar denne tenesta."
+                    },
+                    "device_card": {
+                        "update_name_button": "Oppdater namn"
+                    },
+                    "add_device_page": {
+                        "spinner": "Leitar etter ZHA ZigBee apparat..."
+                    }
+                },
+                "area_registry": {
+                    "caption": "Oppføringsregister",
+                    "description": "Oversikt over områda i heimen din.",
+                    "picker": {
+                        "header": "Områderegister",
+                        "introduction": "Områda vert brukt til å organisere kvar einingar er. Denne informasjonen vil bli brukt av Home Assistant for å hjelpe deg å organisere brukargrensesnittet, løyver og integrasjoner med andre system.",
+                        "introduction2": "For å plassere ei eining i eit område, bruk linken under for å navigere til integrasjonssida og trykk deretter på konfigurer integrasjon for å opne einingskortet.",
+                        "integrations_page": "Integrasjonsside",
+                        "no_areas": "Ser ut til at du ikkje har noko område endå!"
+                    },
+                    "no_areas": "Ser ut til at du ikkje har noko område endå!",
+                    "create_area": "LAG OMRÅDE",
+                    "editor": {
+                        "default_name": "Nytt område",
+                        "delete": "SLETT",
+                        "update": "OPPDATER",
+                        "create": "LAG"
+                    }
+                },
+                "entity_registry": {
+                    "caption": "Oppføringsregister",
+                    "description": "Oversikt over alle kjende oppføringar.",
+                    "picker": {
+                        "header": "Oppføringsregisteret",
+                        "unavailable": "(utilgjengeleg)",
+                        "introduction": "Home Assistant har eit register over alle oppføringane den nokon gang har sett som kan unikt identifiserast. Kvar av desse oppføringane har ein eigen oppføringsidentifikasjon som er reservert for akkuratt denne oppføringa.",
+                        "introduction2": "Bruk oppføringsregisteret til å skrive over namn, endre oppføringsidentifikasjonane eller fjerne oppføringar frå Home Assistant. Merk deg at å fjerne oppføringa i oppføringregisteret ikkje fjernar sjølve oppføringa. For å gjere dette, gå vidare inn på linken under og fjern oppføringa i integrasjonssida.",
+                        "integrations_page": "Integrasjonsside"
+                    },
+                    "editor": {
+                        "unavailable": "Denne eininga er for augeblinken ikkje tilgjengeleg.",
+                        "default_name": "Nytt område",
+                        "delete": "SLETT",
+                        "update": "OPPDATER"
+                    }
+                },
+                "person": {
+                    "caption": "Personar",
+                    "description": "Administrer personane Home Assistant sporer.",
+                    "detail": {
+                        "name": "Namn",
+                        "device_tracker_intro": "Vel eininga som høyrer til denne personen.",
+                        "device_tracker_picked": "Spor eining",
+                        "device_tracker_pick": "Vel eining for å spore"
+                    }
+                }
+            },
+            "profile": {
+                "push_notifications": {
+                    "header": "Pushvarslar",
+                    "description": "Send varslar til denne einiga",
+                    "error_load_platform": "Konfigurer notify.html5",
+                    "error_use_https": "Krev SSL-aktivert til frontend",
+                    "push_notifications": "Pushvarslar",
+                    "link_promo": "Lær meir"
+                },
+                "language": {
+                    "header": "Språk",
+                    "link_promo": "Hjelp å oversette",
+                    "dropdown_label": "Språk"
+                },
+                "themes": {
+                    "header": "Tema",
+                    "error_no_theme": "Ingen tema tilgjengeleg",
+                    "link_promo": "Lær om temaer",
+                    "dropdown_label": "Tema"
+                },
+                "refresh_tokens": {
+                    "header": "Oppdateringstokenar",
+                    "description": "Kvar oppdateringstoken representerer ei innloggingsøkt. Oppdateringstokenane vil autoamtisk bli fjerna når du loggar ut. Dei fylgande oppdateringstokenane er aktive på kontoen din.",
+                    "token_title": "Oppdater token for {clientId}",
+                    "created_at": "Laga den {date}",
+                    "confirm_delete": "Er du sikker på at du vil slette oppdateringstoken for {name}?",
+                    "delete_failed": "Kunne ikkje slette oppdateringstoken",
+                    "last_used": "Sist brukt den {date} frå {location}",
+                    "not_used": "Har aldri vore brukt",
+                    "current_token_tooltip": "Kan ikkje slette gjeldande oppdateringstoken"
+                },
+                "long_lived_access_tokens": {
+                    "header": "Langtidslevande tilgangstokenar",
+                    "description": "Lag ein langtidslevande tilgangstoken som tillet skripta dine å samhandle med Home Assistant-instansen. Kvar token vil vere gyldig i 10 år etter oppretting. Dei fylgande langtidslevande tokenane er for tida aktive.",
+                    "learn_auth_requests": "Lær korleis du lagar ein autentisert førespurnad.",
+                    "created_at": "Oppretta den {date}",
+                    "confirm_delete": "Er du sikker på at du vil slette tilgangstoken for {name}?",
+                    "delete_failed": "Klarte ikkje å slette tilgangstoken",
+                    "create": "Lag token",
+                    "create_failed": "Klarte ikkje å lage tilgangstoken.",
+                    "prompt_name": "Namn?",
+                    "prompt_copy_token": "Kopier tilgangstoken. Den vil ikkje visast igjen.",
+                    "empty_state": "Du har ikkje langtidslevande tilgangstoken endå.",
+                    "last_used": "Sist brukt den {date} frå {location}",
+                    "not_used": "Har aldri vore brukt"
+                },
+                "current_user": "Du er for augeblinken logga inn som {fullName}.",
+                "is_owner": "Du er ein eigar",
+                "logout": "Logg ut",
+                "change_password": {
+                    "header": "Bytt passord",
+                    "current_password": "Noverande passord",
+                    "new_password": "Nytt passord",
+                    "confirm_new_password": "Stadfest nytt passord",
+                    "error_required": "Krav",
+                    "submit": "Send inn"
+                },
+                "mfa": {
+                    "header": "Flerfaktorautentiseringsmoduler",
+                    "disable": "Deaktiver",
+                    "enable": "Aktiver",
+                    "confirm_disable": "Er du sikker på at du vil deaktivere {nome}?"
+                },
+                "mfa_setup": {
+                    "title_aborted": "Avslutta",
+                    "title_success": "Suksess!",
+                    "step_done": "Oppsett ferdig for {step}",
+                    "close": "Lukk",
+                    "submit": "Send inn"
+                }
+            },
+            "page-authorize": {
+                "initializing": "Set i gang",
+                "authorizing_client": "Du held på å gi {clientId} tilgang til Home Assistant-instansen din.",
+                "logging_in_with": "Loggar inn med **{authProviderName}**",
+                "pick_auth_provider": "Eller logg inn med",
+                "abort_intro": "Innlogging avbrote",
+                "form": {
+                    "working": "Ver vennleg og vent",
+                    "unknown_error": "Noko gjekk gale",
+                    "providers": {
+                        "homeassistant": {
+                            "step": {
+                                "init": {
+                                    "data": {
+                                        "username": "Brukarnamn",
+                                        "password": "Passord"
+                                    }
+                                },
+                                "mfa": {
+                                    "data": {
+                                        "code": "To-faktor-autentiseringskode"
+                                    },
+                                    "description": "Opne **{mfa_module_name}** på eininga di for å sjå to-faktor-autentiseringskoda og verifiser identiteten din:"
+                                }
+                            },
+                            "error": {
+                                "invalid_auth": "Ugyldig brukarnamn eller passord",
+                                "invalid_code": "Ugyldig autentiseringskode"
+                            },
+                            "abort": {
+                                "login_expired": "Økt utløpt. Ver vennleg og logg inn igjen."
+                            }
+                        },
+                        "legacy_api_password": {
+                            "step": {
+                                "init": {
+                                    "data": {
+                                        "password": "API-passord"
+                                    },
+                                    "description": "Ver vennleg og skriv inn API-passordet i HTTP-konfigurasjonen din:"
+                                },
+                                "mfa": {
+                                    "data": {
+                                        "code": "To-faktor-autentiseringskode"
+                                    },
+                                    "description": "Opne **{mfa_module_name}** på eininga di for å sjå to-faktor-autentiseringskoda og verifiser identiteten din:"
+                                }
+                            },
+                            "error": {
+                                "invalid_auth": "Ugyldig API-passord",
+                                "invalid_code": "Ugyldig autentiseringskode"
+                            },
+                            "abort": {
+                                "no_api_password_set": "Du har ikkje laga til eit API-passord",
+                                "login_expired": "Økt utløpt. Ver vennleg å logg inn igjen."
+                            }
+                        },
+                        "trusted_networks": {
+                            "step": {
+                                "init": {
+                                    "data": {
+                                        "user": "Brukar"
+                                    },
+                                    "description": "Ver vennleg og vel ein brukar du vil logge inn som:"
+                                }
+                            },
+                            "abort": {
+                                "not_whitelisted": "Datamaskina di er ikkje kvitelista."
+                            }
+                        },
+                        "command_line": {
+                            "step": {
+                                "init": {
+                                    "data": {
+                                        "username": "Brukarnamn",
+                                        "password": "Passord"
+                                    }
+                                },
+                                "mfa": {
+                                    "data": {
+                                        "code": "To-faktorautentiseringskode"
+                                    },
+                                    "description": "Opne **{mfa_module_name}** på eininga di for å sjå to-faktorautentiseringskoda og verifiser identiteten din:"
+                                }
+                            },
+                            "error": {
+                                "invalid_auth": "Ugyldig brukarnamn eller passord",
+                                "invalid_code": "Ugyldig autentiseringskode"
+                            },
+                            "abort": {
+                                "login_expired": "Økta er utgått. Ver vennleg å logg inn igjen."
+                            }
+                        }
+                    }
+                }
+            },
+            "page-onboarding": {
+                "intro": "Er du klar til å vekke heimen din til liv, vinne tilbake privatlivet ditt og vli med i eit verdsomspennande samfunn av tinkerers?",
+                "user": {
+                    "intro": "Lat oss begynne med å opprette ein brukarkonto.",
+                    "required_field": "Krav",
+                    "data": {
+                        "name": "Namn",
+                        "username": "Brukarnamn",
+                        "password": "Passord",
+                        "password_confirm": "Stadfest passord"
+                    },
+                    "create_account": "Lag konto",
+                    "error": {
+                        "required_fields": "Fyll ut dei nødvendige felta",
+                        "password_not_match": "Passorda er ikkje eins"
+                    }
+                }
+            },
+            "lovelace": {
+                "cards": {
+                    "shopping-list": {
+                        "checked_items": "Markerte elementa",
+                        "clear_items": "Fjern dei markerrte elementa",
+                        "add_item": "Legg til element"
+                    },
+                    "empty_state": {
+                        "title": "Velkommen heim",
+                        "no_devices": "Denne sida let deg ta kontroll på einingane dine, men det ser ut til at du ikkje har sett opp noko endå. Gå til integrasjonssida for å setje i gang.",
+                        "go_to_integrations_page": "Gå til integrasjonssida"
+                    }
+                },
+                "editor": {
+                    "edit_card": {
+                        "header": "Kortkonfigurasjon",
+                        "save": "Lagre",
+                        "toggle_editor": "Bytt redigeringsverktøy",
+                        "pick_card": "Vel kortet du vil legge til.",
+                        "add": "Legg til kort",
+                        "edit": "Redigere",
+                        "delete": "Slett",
+                        "move": "Rørsle"
+                    },
+                    "migrate": {
+                        "header": "Konfigurasjonen er ikkje kompatibel",
+                        "para_no_id": "Dette elementet har ikkje ein ID. Ver vennleg og legg til ein ID til dette elementet i \"ui-lovelace.yaml\"-fila di.",
+                        "para_migrate": "Home assistant kan legge til ID-ar til alle korta og sidene dine automatisk for deg ved å trykke \"Overfør konfigurasjon\"-knappen.",
+                        "migrate": "Overfør konfigurasjon"
+                    },
+                    "header": "Rediger brukargrensesnitt",
+                    "edit_view": {
+                        "header": "Vis konfigurasjon",
+                        "add": "Legg til side",
+                        "edit": "Rediger sida",
+                        "delete": "Slett sida"
+                    },
+                    "save_config": {
+                        "header": "Ta kontroll over Lovelace-brukargrensesnittet",
+                        "para": "Som standard kjem Home Assistant til å vedlikehalde brukargrensesnittet, og oppdatere det når nye oppføringar eller Lovelace-komponentar vert tilgjengelege. Dersom du tek kontroll, vil vi ikkje lenger kunne lage dette til automatisk for deg.",
+                        "para_sure": "Er du sikker på at du vil ta kontroll over brukergrensesnittet ditt?",
+                        "cancel": "Gløym det",
+                        "save": "Ta kontroll"
+                    },
+                    "menu": {
+                        "raw_editor": "Rå konfigurasjonsredigerar"
+                    },
+                    "raw_editor": {
+                        "header": "Rediger konfigurasjon",
+                        "save": "Lagre",
+                        "unsaved_changes": "Ikkje lagra endringar",
+                        "saved": "Lagra"
+                    }
+                },
+                "menu": {
+                    "configure_ui": "Konfigurer brukargrensesnitt",
+                    "unused_entities": "Ubrukte oppføringar",
+                    "help": "Hjelp",
+                    "refresh": "Oppdater"
+                },
+                "warning": {
+                    "entity_not_found": "Oppføringa er utilgjengelig: {entity}",
+                    "entity_non_numeric": "Oppføringa er ikkje numerisk: {entity}"
+                }
+            }
+        },
+        "sidebar": {
+            "log_out": "Logg ut",
+            "developer_tools": "Utviklarverkty"
+        },
+        "common": {
+            "loading": "Lastar",
+            "cancel": "Avbryt",
+            "save": "Lagre"
+        },
+        "duration": {
+            "day": "{count} {count, plural,\none {dag}\nother {dagar}\n}",
+            "week": "{count} {count, plural,\none {veke}\nother {veker}\n}",
+            "second": "{count} {count, plural,\none {sekund}\nother {sekundar}\n}",
+            "minute": "{count} {count, plural,\none {minutt}\nother {minutt}\n}",
+            "hour": "{count} {count, plural,\none {time}\nother {timar}\n}"
+        },
+        "login-form": {
+            "password": "Passord",
+            "remember": "Hugs",
+            "log_in": "Logg inn"
+        },
+        "card": {
+            "camera": {
+                "not_available": "Bilete ikkje tilgjengeleg"
+            },
+            "persistent_notification": {
+                "dismiss": "Avvis"
+            },
+            "scene": {
+                "activate": "Aktiver"
+            },
+            "script": {
+                "execute": "Utfør"
+            },
+            "weather": {
+                "attributes": {
+                    "air_pressure": "Lufttrykk",
+                    "humidity": "Fuktigheit",
+                    "temperature": "Temperatur",
+                    "visibility": "Sikt",
+                    "wind_speed": "Vindfart"
+                },
+                "cardinal_direction": {
+                    "e": "Ø",
+                    "ene": "ØNØ",
+                    "ese": "ØSØ",
+                    "n": "N",
+                    "ne": "NØ",
+                    "nne": "NNØ",
+                    "nw": "NV",
+                    "nnw": "NNV",
+                    "s": "S",
+                    "se": "SØ",
+                    "sse": "SSØ",
+                    "ssw": "SSV",
+                    "sw": "SV",
+                    "w": "V",
+                    "wnw": "VNV",
+                    "wsw": "VSV"
+                },
+                "forecast": "Vêrmelding"
+            },
+            "alarm_control_panel": {
+                "code": "Kode",
+                "clear_code": "Slett alt",
+                "disarm": "Skru av",
+                "arm_home": "Heimemodus",
+                "arm_away": "Bortemodus",
+                "arm_night": "Aktiver natt",
+                "armed_custom_bypass": "Tilpassa bypass",
+                "arm_custom_bypass": "Tilpassa bypass"
+            },
+            "automation": {
+                "last_triggered": "Sist utløyst",
+                "trigger": "Utløysar"
+            },
+            "cover": {
+                "position": "Posisjon",
+                "tilt_position": "Tiltposisjon"
+            },
+            "fan": {
+                "speed": "Fart",
+                "oscillate": "Sving",
+                "direction": "Retning"
+            },
+            "light": {
+                "brightness": "Lysstyrke",
+                "color_temperature": "Fargetemperatur",
+                "white_value": "Kvitverdi",
+                "effect": "Effekt"
+            },
+            "media_player": {
+                "text_to_speak": "Tekst til tale",
+                "source": "Kjelde",
+                "sound_mode": "Lydmodus"
+            },
+            "climate": {
+                "currently": "Akkuratt no",
+                "on_off": "På \/ av",
+                "target_temperature": "Temperaturmål",
+                "target_humidity": "Fuktigheitsmål",
+                "operation": "Operasjon",
+                "fan_mode": "Viftemodus",
+                "swing_mode": "Svingmodus",
+                "away_mode": "Bortemodus",
+                "aux_heat": "Aux-varme"
+            },
+            "lock": {
+                "code": "Kode",
+                "lock": "Lås",
+                "unlock": "Lås opp"
+            },
+            "vacuum": {
+                "actions": {
+                    "resume_cleaning": "Fortsett reingjeringa",
+                    "return_to_base": "Gå tilbake til ladestasjonen",
+                    "start_cleaning": "Start reingjering",
+                    "turn_on": "Skru på",
+                    "turn_off": "Skru av"
+                }
+            },
+            "water_heater": {
+                "currently": "For augeblinken",
+                "on_off": "På \/ av",
+                "target_temperature": "Temperaturmål",
+                "operation": "Operasjon",
+                "away_mode": "Bortemodus"
+            }
+        },
+        "components": {
+            "entity": {
+                "entity-picker": {
+                    "entity": "Eining"
+                }
+            },
+            "service-picker": {
+                "service": "Teneste"
+            },
+            "relative_time": {
+                "past": "{time} sidan",
+                "future": "Om {time}",
+                "never": "Aldri",
+                "duration": {
+                    "second": "{count} {count, plural,\none {sekund}\nother {sekundar}\n}",
+                    "minute": "{count} {count, plural,\none {minutt}\nother {minutt}\n}",
+                    "hour": "{count} {count, plural,\none {time}\nother {timar}\n}",
+                    "day": "{count} {count, plural,\none {dag}\nother {dagar}\n}",
+                    "week": "{count} {count, plural,\none {veke}\nother {veker}\n}"
+                }
+            },
+            "history_charts": {
+                "loading_history": "Lastar tilstandshistoria...",
+                "no_history_found": "Inga tilstandshistorie funne"
+            }
+        },
+        "notification_toast": {
+            "entity_turned_on": "Skrudde på {entity}.",
+            "entity_turned_off": "Skrudde av {entity}.",
+            "service_called": "Tenesten {service} tilkalla",
+            "service_call_failed": "Klarte ikkje å kalle tenesten {serivce}.",
+            "connection_lost": "Tilkopling mista. Prøver å kople til på nytt.."
+        },
+        "dialogs": {
+            "more_info_settings": {
+                "save": "Lagre",
+                "name": "Namn",
+                "entity_id": "Einings-ID"
+            },
+            "more_info_control": {
+                "script": {
+                    "last_action": "Siste handling "
+                },
+                "sun": {
+                    "elevation": "Høgde",
+                    "rising": "Hevande",
+                    "setting": "Innstilling"
+                },
+                "updater": {
+                    "title": "Oppdater instruksane"
+                }
+            }
+        },
+        "auth_store": {
+            "ask": "Vil du lagre denne pålogginga?",
+            "decline": "Nei takk",
+            "confirm": "Lagre innlogging"
+        },
+        "notification_drawer": {
+            "click_to_configure": "Klikk på knappen for å konfigurere {entity}",
+            "empty": "Ingen varslar",
+            "title": "Varsler"
+        }
+    },
+    "domain": {
+        "alarm_control_panel": "Alarmkontrollpanel",
+        "automation": "Automasjonar",
+        "binary_sensor": "Binærsensor",
+        "calendar": "Kalendar",
+        "camera": "Kamera",
+        "climate": "Klima",
+        "configurator": "Konfigurator",
+        "conversation": "Samtale",
+        "cover": "Dekke",
+        "device_tracker": "Einingssporing",
+        "fan": "Vifte",
+        "history_graph": "Historisk graf",
+        "group": "Gruppe",
+        "image_processing": "Biletehandsaming",
+        "input_boolean": "Angje boolsk",
+        "input_datetime": "Angje dato",
+        "input_select": "Angje val",
+        "input_number": "Angje nummer",
+        "input_text": "Angje tekst",
+        "light": "Lys",
+        "lock": "Lås",
+        "mailbox": "Postkasse",
+        "media_player": "Mediaspelar",
+        "notify": "Varsle",
+        "plant": "Plante",
+        "proximity": "Nærleik",
+        "remote": "Fjernkontroll",
+        "scene": "Scene",
+        "script": "Skript",
+        "sensor": "Sensor",
+        "sun": "Sol",
+        "switch": "Brytar",
+        "updater": "Oppdateringar",
+        "weblink": "Nettlenke",
+        "zwave": "Z-Wave",
+        "vacuum": "Støvsugar",
+        "zha": "ZHA",
+        "hassio": "Hass.io",
+        "homeassistant": "Home Assistant",
+        "lovelace": "Lovelace",
+        "system_health": "Systemhelse",
+        "person": "Person"
+    },
+    "attribute": {
+        "weather": {
+            "humidity": "Luftfuktigheit",
+            "visibility": "Sikt",
+            "wind_speed": "Vindhastigheit"
+        }
+    },
+    "state_attributes": {
+        "climate": {
+            "fan_mode": {
+                "off": "Av",
+                "on": "På",
+                "auto": "Auto"
+            }
+        }
+    },
+    "groups": {
+        "system-admin": "Administratorer",
+        "system-users": "Brukarar"
+    }
+}

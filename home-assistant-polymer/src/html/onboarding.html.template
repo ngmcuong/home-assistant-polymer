@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>DQSMART</title>
+    <link rel='preload' href='/static/fonts/roboto/Roboto-Light.ttf' as='font' crossorigin />
+    <link rel='preload' href='/static/fonts/roboto/Roboto-Regular.ttf' as='font' crossorigin />
+    <%= require('raw-loader!./_header.html.template').default %>
+    <style>
+        body {
+              background: url("/static/icons/background-login.png") no-repeat;
+              background-size: cover;
+          }
+        .content {
+          padding: 20px 16px;
+          max-width: 360px;
+          margin: 0 auto;
+        }
+
+        .header {
+          font-size: 1.96em;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-weight: 300;
+        }
+
+        .logo {
+          width: 164px;
+          height: 164px;
+          background: #EC2028;
+        }
+
+        .header img {
+          margin-left: 50%;
+          margin-top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .header-text {
+          color: #FC313E;
+          font-size: 20px;
+          letter-spacing: 5px;
+          line-height: 24px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class='header'>
+        <img src="/static/icons/favicon-512x512.png" height="64" alt="DQ Logo">
+        <h3 class="header-text">DQSMART</h3>
+      </div>
+
+      <ha-onboarding>Initializing</ha-onboarding>
+    </div>
+    <% if (!latestBuild) { %>
+      <script src="/static/custom-elements-es5-adapter.js"></script>
+      <script src="<%= compatibility %>"></script>
+    <% } %>
+    <script>
+    window.stepsPromise = fetch('/api/onboarding', { credentials: 'same-origin' });
+
+    var webComponentsSupported = (
+      'customElements' in window &&
+      'content' in document.createElement('template'));
+    if (!webComponentsSupported) {
+      var e = document.createElement('script');
+      e.src = '/static/webcomponents-bundle.js';
+      document.write(e.outerHTML);
+    }
+    </script>
+    <script src="<%= entrypoint %>"></script>
+    <script src='<%= hassIconsJS %>' async></script>
+  </body>
+</html>
