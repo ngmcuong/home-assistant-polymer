@@ -46,11 +46,6 @@ class HuiGenericEntityRow extends LitElement {
     }
 
     return html`
-      <!-- TODO: Remove icon here -->
-      <state-badge
-        .stateObj="${stateObj}"
-        .overrideIcon="${this.config.icon}"
-      ></state-badge>
       <div class="flex">
         <div class="info">
           ${this.config.name || computeStateName(stateObj)}
