@@ -28,6 +28,9 @@ import applyThemesOnElement from "../../../common/dom/apply_themes_on_element";
 const icons = {
   fan: "hass:fan",
   light: "hass:lightbulb",
+  switch: "hass:flash",
+  lock: "hass:lock",
+  binary_sensor: "hass:run",
 };
 
 @customElement("hui-entities-card")
@@ -85,6 +88,7 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
   }
 
   protected _renderIcon(type: any  | string): TemplateResult {
+    console.log("entities", type);
     let iconType = '';
     if (typeof type === 'object') {
       iconType = type.entity.toString().split('.')[0];

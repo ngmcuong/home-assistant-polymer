@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a862c97e-c2c5-49dd-96dc-bd7e09708289" name="Default Changelist" comment="" />
+    <list default="true" id="a862c97e-c2c5-49dd-96dc-bd7e09708289" name="Default Changelist" comment="DQ-1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panels/lovelace/cards/hui-entities-card.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/lovelace/cards/hui-entities-card.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panels/lovelace/cards/hui-thermostat-card.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/lovelace/cards/hui-thermostat-card.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/panels/lovelace/entity-rows/hui-text-entity-row.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/panels/lovelace/entity-rows/hui-text-entity-row.ts" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,162 +17,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.66220236">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/panels/lovelace/hui-view.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7371">
-                  <caret line="296" column="53" selection-start-line="296" selection-start-column="53" selection-end-line="296" selection-end-column="53" />
-                  <folding>
-                    <element signature="e#0#122#0" expanded="true" />
-                    <element signature="e#298#377#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/panels/lovelace/cards/hui-entities-card.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="27">
-                  <caret line="206" column="33" lean-forward="true" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#0#137#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/panels/lovelace/cards/hui-thermostat-card.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="590" column="25" selection-start-line="590" selection-start-column="25" selection-end-line="590" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#0#117#0" expanded="true" />
-                    <element signature="e#954#1108#0" />
-                    <element signature="e#1129#1360#0" />
-                    <element signature="n#!!block;n#getConfigElement#0;n#HuiThermostatCard#0" />
-                    <element signature="e#1566#1618#0" />
-                    <element signature="n#!!block;n#getStubConfig#0;n#HuiThermostatCard#0" />
-                    <element signature="n#!!block;n#getCardSize#0;n#HuiThermostatCard#0" />
-                    <element signature="n#!!block;n#setConfig#0;n#HuiThermostatCard#0" />
-                    <element signature="e#2288#2371#0" />
-                    <element signature="n#!!block;n#connectedCallback#0;n#HuiThermostatCard#0" />
-                    <element signature="e#2538#2572#0" />
-                    <element signature="e#2787#3024#0" />
-                    <element signature="e#3281#3394#0" />
-                    <element signature="n#paper-icon-button#0;n#div#0;n#ha-card#0;n#div#0;n#!!top" />
-                    <element signature="n#span#0;n#!!top" />
-                    <element signature="n#!!block;n#firstUpdated#0;n#HuiThermostatCard#0" />
-                    <element signature="e#5066#5100#0" />
-                    <element signature="n#!!block;n#updated#0;n#HuiThermostatCard#0" />
-                    <element signature="e#5263#5284#0" />
-                    <element signature="e#5419#5498#0" />
-                    <element signature="e#5597#5618#0" />
-                    <element signature="e#5825#6041#0" />
-                    <element signature="e#5960#5997#0" />
-                    <element signature="n#!!block;n#_stepSize#0;n#HuiThermostatCard#0" />
-                    <element signature="e#6192#6250#0" />
-                    <element signature="n#!!block;n#_initialLoad#0;n#HuiThermostatCard#0" />
-                    <element signature="e#6478#6548#0" />
-                    <element signature="e#6718#6745#0" />
-                    <element signature="e#7279#7595#0" />
-                    <element signature="n#!!block;n#_genSliderValue#0;n#HuiThermostatCard#0" />
-                    <element signature="e#7884#8198#0" />
-                    <element signature="e#8046#8168#0" />
-                    <element signature="e#8204#8397#0" />
-                    <element signature="n#!!block;n#_updateSetTemp#0;n#HuiThermostatCard#0" />
-                    <element signature="n#!!block;n#_dragEvent#0;n#HuiThermostatCard#0" />
-                    <element signature="n#!!block;n#_setTemperature#0;n#HuiThermostatCard#0" />
-                    <element signature="e#8899#9416#0" />
-                    <element signature="e#8933#9169#0" />
-                    <element signature="e#8996#9159#0" />
-                    <element signature="e#9175#9410#0" />
-                    <element signature="e#9238#9400#0" />
-                    <element signature="e#9422#9571#0" />
-                    <element signature="e#9483#9563#0" />
-                    <element signature="n#!!block;n#_handleMoreInfo#0;n#HuiThermostatCard#0" />
-                    <element signature="e#10236#10281#0" />
-                    <element signature="n#!!block;n#_handleModeClick#0;n#HuiThermostatCard#0" />
-                    <element signature="e#10399#10498#0" />
-                    <element signature="n#!!block;n#formatTemp#0;n#HuiThermostatCard#0" />
-                    <element signature="e#10618#10688#0" />
-                    <element signature="e#10787#10938#0" />
-                    <element signature="e#108#196#0" />
-                    <element signature="e#892#1122#0" />
-                    <element signature="e#1137#1206#0" />
-                    <element signature="e#1221#1311#0" />
-                    <element signature="e#1326#1416#0" />
-                    <element signature="e#1431#1521#0" />
-                    <element signature="e#1538#1632#0" />
-                    <element signature="e#1646#1734#0" />
-                    <element signature="e#1753#1851#0" />
-                    <element signature="e#1865#1953#0" />
-                    <element signature="e#1967#2055#0" />
-                    <element signature="e#2070#2160#0" />
-                    <element signature="e#2183#2279#0" />
-                    <element signature="e#2298#2357#0" />
-                    <element signature="e#2373#2995#0" />
-                    <element signature="e#3011#3629#0" />
-                    <element signature="e#3650#3773#0" />
-                    <element signature="e#3810#3896#0" />
-                    <element signature="e#3932#3999#0" />
-                    <element signature="e#4031#4193#0" />
-                    <element signature="e#4234#4316#0" />
-                    <element signature="e#4354#4511#0" />
-                    <element signature="e#4543#4604#0" />
-                    <element signature="e#4697#4742#0" />
-                    <element signature="e#4854#4936#0" />
-                    <element signature="e#4954#5173#0" />
-                    <element signature="e#5803#5948#0" />
-                    <element signature="e#6725#6806#0" />
-                    <element signature="e#6820#7076#0" />
-                    <element signature="e#7096#7324#0" />
-                    <element signature="e#18393#18497#0" />
-                    <element signature="e#18444#18495#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/panels/lovelace/components/hui-generic-entity-row.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="108">
-                  <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/entity/ha-entity-toggle.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="729">
-                  <caret line="43" column="29" lean-forward="true" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
-                  <folding>
-                    <element signature="e#0#54#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Living room window</find>
-      <find>demo_</find>
-      <find>door</find>
-      <find>doors</find>
       <find>Doors</find>
       <find>air_quality.demo_air_quality_home</find>
       <find>ha-entity-picker</find>
@@ -194,7 +47,19 @@
       <find>class=&quot;cli</find>
       <find>rendericon</find>
       <find>.selec</find>
+      <find>icon</find>
+      <find>html</find>
+      <find>binary_sensor</find>
+      <find>Detected</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -232,7 +97,6 @@
         <option value="$PROJECT_DIR$/src/auth/ha-auth-flow.js" />
         <option value="$PROJECT_DIR$/src/components/ha-form.js" />
         <option value="$PROJECT_DIR$/src/html/authorize.html.template" />
-        <option value="$PROJECT_DIR$/src/panels/lovelace/entity-rows/hui-text-entity-row.ts" />
         <option value="$PROJECT_DIR$/src/layouts/ha-app-layout.js" />
         <option value="$PROJECT_DIR$/src/panels/lovelace/components/hui-entities-toggle.ts" />
         <option value="$PROJECT_DIR$/src/panels/lovelace/hui-view.ts" />
@@ -242,10 +106,14 @@
         <option value="$PROJECT_DIR$/src/panels/dev-state/ha-panel-dev-state.js" />
         <option value="$PROJECT_DIR$/src/panels/lovelace/hui-unused-entities.ts" />
         <option value="$PROJECT_DIR$/src/panels/lovelace/common/compute-unused-entities.ts" />
-        <option value="$PROJECT_DIR$/src/panels/lovelace/cards/hui-entities-card.ts" />
         <option value="$PROJECT_DIR$/src/panels/lovelace/entity-rows/hui-lock-entity-row.ts" />
-        <option value="$PROJECT_DIR$/src/panels/lovelace/components/hui-generic-entity-row.ts" />
         <option value="$PROJECT_DIR$/src/panels/lovelace/cards/hui-thermostat-card.ts" />
+        <option value="$PROJECT_DIR$/src/panels/lovelace/components/hui-generic-entity-row.ts" />
+        <option value="$PROJECT_DIR$/src/panels/lovelace/cards/hui-entities-card.ts" />
+        <option value="$PROJECT_DIR$/src/panels/lovelace/common/create-row-element.ts" />
+        <option value="$PROJECT_DIR$/src/common/entity/compute_state_display.ts" />
+        <option value="$PROJECT_DIR$/build-translations/full/en.json" />
+        <option value="$PROJECT_DIR$/src/panels/lovelace/entity-rows/hui-text-entity-row.ts" />
       </list>
     </option>
   </component>
@@ -255,7 +123,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -265,9 +133,60 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DQ" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DQ" type="462c0819:PsiDirectoryNode" />
+              <item name="build-translations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DQ" type="462c0819:PsiDirectoryNode" />
+              <item name="build-translations" type="462c0819:PsiDirectoryNode" />
+              <item name="full" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DQ" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DQ" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="panels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DQ" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="panels" type="462c0819:PsiDirectoryNode" />
+              <item name="lovelace" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DQ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DQ" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="panels" type="462c0819:PsiDirectoryNode" />
+              <item name="lovelace" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -326,12 +245,14 @@
       <workItem from="1562419894520" duration="1220000" />
       <workItem from="1562860125788" duration="6472000" />
       <workItem from="1562899112216" duration="11603000" />
-      <workItem from="1562994234233" duration="3789000" />
+      <workItem from="1562994234233" duration="5129000" />
+      <workItem from="1563027561737" duration="4032000" />
+      <workItem from="1563075012275" duration="1712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96828000" />
+    <option name="totallyTimeSpent" value="103912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,11 +265,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49931034" weight="0.2572877" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49931034" visible="true" weight="0.2559524" />
       <window_info id="Structure" order="1" sideWeight="0.5006896" side_tool="true" weight="0.2572877" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -357,9 +278,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3288364" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3288364" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
-      <window_info anchor="bottom" id="File Transfer" order="10" weight="0.4030354" />
+      <window_info anchor="bottom" id="File Transfer" order="10" weight="0.40134907" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" weight="0.32965517" />
@@ -396,32 +317,11 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.template" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="DQ-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="DQ-1" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/layouts/hass-router-page.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6240">
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts/home-assistant-main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3135">
-          <folding>
-            <element signature="e#0#120#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home-assistant-polymer/src/html/authorize.html.template">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="34" column="12" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="34" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hass_frontend/icons/logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -544,16 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1300">
           <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/entity-rows/hui-text-entity-row.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="51" column="25" lean-forward="true" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#137#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -727,10 +617,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/common/create-row-element.ts">
+    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/entity-rows/hui-lock-entity-row.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2116">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="135">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -747,42 +637,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/entity/ha-entity-toggle.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="43" column="29" lean-forward="true" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
+        <state relative-caret-position="610">
+          <caret line="43" column="29" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/components/hui-generic-entity-row.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/entity-rows/hui-lock-entity-row.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/cards/hui-entities-card.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="206" column="33" lean-forward="true" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#137#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/panels/lovelace/cards/hui-thermostat-card.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="590" column="25" selection-start-line="590" selection-start-column="25" selection-end-line="590" selection-end-column="25" />
+        <state relative-caret-position="193">
+          <caret line="583" column="9" lean-forward="true" selection-start-line="583" selection-start-column="9" selection-end-line="583" selection-end-column="9" />
           <folding>
             <element signature="e#0#117#0" expanded="true" />
             <element signature="e#954#1108#0" />
@@ -797,76 +663,79 @@
             <element signature="e#2538#2572#0" />
             <element signature="e#2787#3024#0" />
             <element signature="e#3281#3394#0" />
-            <element signature="n#paper-icon-button#0;n#div#0;n#ha-card#0;n#div#0;n#!!top" />
-            <element signature="n#span#0;n#!!top" />
             <element signature="n#!!block;n#firstUpdated#0;n#HuiThermostatCard#0" />
-            <element signature="e#5066#5100#0" />
             <element signature="n#!!block;n#updated#0;n#HuiThermostatCard#0" />
-            <element signature="e#5263#5284#0" />
-            <element signature="e#5419#5498#0" />
-            <element signature="e#5597#5618#0" />
-            <element signature="e#5825#6041#0" />
-            <element signature="e#5960#5997#0" />
             <element signature="n#!!block;n#_stepSize#0;n#HuiThermostatCard#0" />
-            <element signature="e#6192#6250#0" />
             <element signature="n#!!block;n#_initialLoad#0;n#HuiThermostatCard#0" />
-            <element signature="e#6478#6548#0" />
-            <element signature="e#6718#6745#0" />
-            <element signature="e#7279#7595#0" />
             <element signature="n#!!block;n#_genSliderValue#0;n#HuiThermostatCard#0" />
-            <element signature="e#7884#8198#0" />
-            <element signature="e#8046#8168#0" />
-            <element signature="e#8204#8397#0" />
             <element signature="n#!!block;n#_updateSetTemp#0;n#HuiThermostatCard#0" />
             <element signature="n#!!block;n#_dragEvent#0;n#HuiThermostatCard#0" />
             <element signature="n#!!block;n#_setTemperature#0;n#HuiThermostatCard#0" />
-            <element signature="e#8899#9416#0" />
-            <element signature="e#8933#9169#0" />
-            <element signature="e#8996#9159#0" />
-            <element signature="e#9175#9410#0" />
-            <element signature="e#9238#9400#0" />
-            <element signature="e#9422#9571#0" />
-            <element signature="e#9483#9563#0" />
             <element signature="n#!!block;n#_handleMoreInfo#0;n#HuiThermostatCard#0" />
-            <element signature="e#10236#10281#0" />
             <element signature="n#!!block;n#_handleModeClick#0;n#HuiThermostatCard#0" />
-            <element signature="e#10399#10498#0" />
             <element signature="n#!!block;n#formatTemp#0;n#HuiThermostatCard#0" />
-            <element signature="e#10618#10688#0" />
-            <element signature="e#10787#10938#0" />
-            <element signature="e#108#196#0" />
-            <element signature="e#892#1122#0" />
-            <element signature="e#1137#1206#0" />
-            <element signature="e#1221#1311#0" />
-            <element signature="e#1326#1416#0" />
-            <element signature="e#1431#1521#0" />
-            <element signature="e#1538#1632#0" />
-            <element signature="e#1646#1734#0" />
-            <element signature="e#1753#1851#0" />
-            <element signature="e#1865#1953#0" />
-            <element signature="e#1967#2055#0" />
-            <element signature="e#2070#2160#0" />
-            <element signature="e#2183#2279#0" />
-            <element signature="e#2298#2357#0" />
-            <element signature="e#2373#2995#0" />
-            <element signature="e#3011#3629#0" />
-            <element signature="e#3650#3773#0" />
-            <element signature="e#3810#3896#0" />
-            <element signature="e#3932#3999#0" />
-            <element signature="e#4031#4193#0" />
-            <element signature="e#4234#4316#0" />
-            <element signature="e#4354#4511#0" />
-            <element signature="e#4543#4604#0" />
-            <element signature="e#4697#4742#0" />
-            <element signature="e#4854#4936#0" />
-            <element signature="e#4954#5173#0" />
-            <element signature="e#5803#5948#0" />
-            <element signature="e#6725#6806#0" />
-            <element signature="e#6820#7076#0" />
-            <element signature="e#7096#7324#0" />
-            <element signature="e#18393#18497#0" />
-            <element signature="e#18444#18495#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/cards/hui-entity-button-card.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4600">
+          <caret line="38" column="41" lean-forward="true" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/entity-rows/hui-text-entity-row.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="90" column="36" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/common/create-row-element.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="130" column="69" selection-start-line="130" selection-start-column="69" selection-end-line="130" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/cards/hui-entities-card.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="244" column="30" selection-start-line="244" selection-start-column="30" selection-end-line="244" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/panels/lovelace/components/hui-generic-entity-row.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/entity/compute_state_display.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build-translations/full/en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="126" column="19" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="19" />
         </state>
       </provider>
     </entry>

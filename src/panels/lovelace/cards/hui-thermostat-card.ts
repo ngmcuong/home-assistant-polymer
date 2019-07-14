@@ -396,7 +396,7 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
         }
         ha-card {
           overflow: hidden;
-          min-height: 275px;
+          min-height: 330px;
           height: 100%;
           position: relative;
           background: transparent;
@@ -580,20 +580,27 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           width: 100%;
           display: flex;
           justify-content: space-around;
-          margin-bottom: 16px;
+          margin-bottom: 5px;
         }
         
         .device-name {
-          font-size: 18px;
-          padding: 10px 0;
+          font-size: 14px;
+          padding: 5px 0;
         }
+        
         .modes ha-icon {
           padding: 8px 26px;
           color: var(--disabled-text-color);
           cursor: pointer;
           display: inline-block;
-          border: 1px solid #F2F2F2;
+          border: 1px solid;
+          border-radius: 5px;
         }
+        @media only screen and (min-width: 600px)  {
+            .modes ha-icon {
+              padding: 8px;
+            }
+          }
         .modes ha-icon.selected-icon {
           color: var(--mode-color);
           border-color: var(--mode-color);
