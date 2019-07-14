@@ -10,7 +10,6 @@
           <excludedPaths>
             <excludedPath path="/home-assistant-polymer/node_modules" />
             <excludedPath path="/home-assistant-polymer/.vscode" />
-            <excludedPath path="/home-assistant-polymer/home-assistant-polymer" />
           </excludedPaths>
         </serverdata>
       </paths>

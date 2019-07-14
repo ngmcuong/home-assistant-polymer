@@ -399,9 +399,10 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           min-height: 330px;
           height: 100%;
           position: relative;
-          background: transparent;
+          background: white;
           box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
           border-radius: 5px;
+          opacity: .9;
           z-index: 2;
           
           --rail-border-color: transparent;
@@ -423,7 +424,6 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           position: absolute;
           top: 0;
           left: 0;
-          opacity: .8;
           z-index: 1;
           border-radius: 5px;
         }
@@ -597,6 +597,10 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           border-radius: 5px;
         }
         @media only screen and (min-width: 600px)  {
+        ha-card {
+          min-height: 400px;
+        }
+
             .modes ha-icon {
               padding: 8px;
             }

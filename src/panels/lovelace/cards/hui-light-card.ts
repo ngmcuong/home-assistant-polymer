@@ -93,32 +93,35 @@ export class HuiLightCard extends LitElement implements LovelaceCard {
 
     return html`
       ${this.renderStyle()}
-      <ha-card>
-        <paper-icon-button
-          icon="hass:dots-vertical"
-          class="more-info"
-          @click="${this._handleMoreInfo}"
-        ></paper-icon-button>
-        <div id="light"></div>
-        <div id="tooltip">
-          <div class="icon-state">
-            <ha-icon
-              class="light-icon"
-              data-state="${stateObj.state}"
-              .icon="${stateIcon(stateObj)}"
-              style="${styleMap({
-                filter: this._computeBrightness(stateObj),
-                color: this._computeColor(stateObj),
-              })}"
-              @click="${this._handleTap}"
-            ></ha-icon>
-            <div class="brightness" @ha-click="${this._handleTap}"></div>
-            <div class="name">
-              ${this._config.name || computeStateName(stateObj)}
+      <div class="wrapper">
+        <ha-card>
+          <paper-icon-button
+            icon="hass:dots-vertical"
+            class="more-info"
+            @click="${this._handleMoreInfo}"
+          ></paper-icon-button>
+          <div id="light"></div>
+          <div id="tooltip">
+            <div class="icon-state">
+              <ha-icon
+                class="light-icon"
+                data-state="${stateObj.state}"
+                .icon="${stateIcon(stateObj)}"
+                style="${styleMap({
+                  filter: this._computeBrightness(stateObj),
+                  color: this._computeColor(stateObj),
+                })}"
+                @click="${this._handleTap}"
+              ></ha-icon>
+              <div class="brightness" @ha-click="${this._handleTap}"></div>
+              <div class="name">
+                ${this._config.name || computeStateName(stateObj)}
+              </div>
             </div>
           </div>
-        </div>
-      </ha-card>
+        </ha-card>
+        <div class="clear-background"></div>
+      </div>
     `;
   }
 
@@ -183,16 +186,50 @@ export class HuiLightCard extends LitElement implements LovelaceCard {
         :host {
           display: block;
         }
+        .wrapper {
+          position: relative;
+          margin: 16px;
+          height: 95%;
+        }
+        
+        .clear-background {
+          height: 100%;
+          width: 100%;
+          background: white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: .8;
+          z-index: 1;
+          border-radius: 5px;
+        }
 
         ha-card {
           position: relative;
           overflow: hidden;
+          background: transparent;
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+          border-radius: 5px;
+          z-index: 2;
+          height: 100%;
+          
           --brightness-font-color: white;
           --brightness-font-text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,
             -1px 1px 0 #000, 1px 1px 0 #000;
           --name-font-size: 1.2rem;
           --brightness-font-size: 1.2rem;
           --rail-border-color: transparent;
+        }
+
+        @media only screen and (min-width: 600px) {
+          ha-card {
+            padding-top: 0;
+            padding-bottom: 30px;
+          }
+          
+          #light {
+            padding-top: 16px !important;
+          }
         }
 
         #tooltip {
@@ -210,12 +247,12 @@ export class HuiLightCard extends LitElement implements LovelaceCard {
           margin: auto;
           width: 100%;
           height: 100%;
-          transform: translate(0, 25%);
+          transform: translate(0, 35%);
         }
 
         #light {
           margin: 0 auto;
-          padding-top: 16px;
+          padding-top: 30%;
           padding-bottom: 16px;
         }
 
@@ -356,12 +393,10 @@ export class HuiLightCard extends LitElement implements LovelaceCard {
   }
 
   private _handleTap() {
-  alert('Toggle!!!!!');
     toggleEntity(this.hass!, this._config!.entity!);
   }
 
   private _handleMoreInfo() {
-  console.log('OMG');
     fireEvent(this, "hass-more-info", {
       entityId: this._config!.entity,
     });

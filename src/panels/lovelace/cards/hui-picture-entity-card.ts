@@ -81,25 +81,29 @@ class HuiPictureEntityCard extends LitElement implements LovelaceCard {
       this.hass.language
     );
 
-    let footer: TemplateResult | string = "";
+    let header: TemplateResult | string = "";
     if (this._config.show_name && this._config.show_state) {
-      footer = html`
-        <div class="footer both">
+      header = html`
+        <div class="header both">
           <div>${name}</div>
           <div>${state}</div>
+          <ha-icon icon="hass:dots-vertical"></ha-icon>
         </div>
       `;
     } else if (this._config.show_name) {
-      footer = html`
-        <div class="footer">${name}</div>
+      header = html`
+        <div class="header">${name}</div>
       `;
     } else if (this._config.show_state) {
-      footer = html`
-        <div class="footer state">${state}</div>
+      header = html`
+        <div class="header state">${state}</div>
       `;
     }
 
     return html`
+      <div class="wrapper">
+      ${header}
+      <div class="empty-space"></div>
       <ha-card>
         <hui-image
           .hass="${this.hass}"
@@ -118,8 +122,9 @@ class HuiPictureEntityCard extends LitElement implements LovelaceCard {
             clickable: stateObj.state !== UNAVAILABLE,
           })}"
         ></hui-image>
-        ${footer}
       </ha-card>
+      <div class="dark-background"></div>
+      </div>
     `;
   }
 
@@ -129,13 +134,38 @@ class HuiPictureEntityCard extends LitElement implements LovelaceCard {
         min-height: 75px;
         overflow: hidden;
         position: relative;
+        
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+        z-index: 2;
+      }
+      
+      .wrapper {
+        position: relative;
+        margin: 16px;
+        height: 95%;
+      }
+      
+      .empty-space {
+        height: 25%;
+      }
+      
+      .dark-background {
+        height: 100%;
+        width: 100%;
+        background: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .8;
+        z-index: 1;
+        border-radius: 5px;
       }
 
       hui-image.clickable {
         cursor: pointer;
       }
 
-      .footer {
+      .header {
         /* start paper-font-common-nowrap style */
         white-space: nowrap;
         overflow: hidden;
@@ -145,12 +175,13 @@ class HuiPictureEntityCard extends LitElement implements LovelaceCard {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0;
+        top: 0;
         background-color: rgba(0, 0, 0, 0.3);
         padding: 16px;
         font-size: 16px;
         line-height: 16px;
         color: white;
+        z-index: 3;
       }
 
       .both {

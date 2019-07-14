@@ -23,18 +23,19 @@ class HaMediaPlayerCard extends LocalizeMixin(EventsMixin(PolymerElement)) {
         include="paper-material-styles iron-flex iron-flex-alignment iron-positioning"
       >
         :host {
-          @apply --paper-material-elevation-1;
           display: block;
           position: relative;
           font-size: 0px;
-          border-radius: 2px;
+          border-radius: 15px;
+          margin: 16px;
         }
-
+        
         .banner {
           position: relative;
-          background-color: white;
-          border-top-left-radius: 2px;
-          border-top-right-radius: 2px;
+          background-color: black;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          height: 100%;
         }
 
         .banner:before {
@@ -72,8 +73,8 @@ class HaMediaPlayerCard extends LocalizeMixin(EventsMixin(PolymerElement)) {
           right: 0;
           bottom: 0;
 
-          border-top-left-radius: 2px;
-          border-top-right-radius: 2px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
 
           background-position: center center;
           background-size: cover;
@@ -126,9 +127,10 @@ class HaMediaPlayerCard extends LocalizeMixin(EventsMixin(PolymerElement)) {
           position: relative;
           @apply --paper-font-body1;
           padding: 8px;
-          border-bottom-left-radius: 2px;
-          border-bottom-right-radius: 2px;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
           background-color: var(--paper-card-background-color, white);
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
         }
 
         .controls paper-icon-button {
@@ -166,61 +168,64 @@ class HaMediaPlayerCard extends LocalizeMixin(EventsMixin(PolymerElement)) {
           visibility: hidden !important;
         }
       </style>
-
-      <div
-        class$="[[computeBannerClasses(playerObj, _coverShowing, _coverLoadError)]]"
-      >
-        <div class="cover" id="cover"></div>
-
-        <div class="caption">
-          [[_computeStateName(stateObj)]]
-          <div class="title">[[computePrimaryText(localize, playerObj)]]</div>
-          [[playerObj.secondaryTitle]]<br />
+      
+      <div class="wrapper">
+        <div
+          class$="[[computeBannerClasses(playerObj, _coverShowing, _coverLoadError)]]"
+        >
+          <div class="cover" id="cover"></div>
+  
+          <div class="caption">
+            [[_computeStateName(stateObj)]]
+            <div class="title">[[computePrimaryText(localize, playerObj)]]</div>
+            [[playerObj.secondaryTitle]]<br />
+          </div>
         </div>
-      </div>
-
-      <paper-progress
-        max="[[stateObj.attributes.media_duration]]"
-        value="[[playbackPosition]]"
-        hidden$="[[computeHideProgress(playerObj)]]"
-        class="progress"
-      ></paper-progress>
-
-      <div class="controls layout horizontal justified">
-        <paper-icon-button
-          icon="hass:power"
-          on-click="handleTogglePower"
-          invisible$="[[computeHidePowerButton(playerObj)]]"
-          class="self-center secondary"
-        ></paper-icon-button>
-
-        <div class="playback-controls">
+  
+        <paper-progress
+          max="[[stateObj.attributes.media_duration]]"
+          value="[[playbackPosition]]"
+          hidden$="[[computeHideProgress(playerObj)]]"
+          class="progress"
+        ></paper-progress>
+  
+        <div class="controls layout horizontal justified">
           <paper-icon-button
-            icon="hass:skip-previous"
-            invisible$="[[!playerObj.supportsPreviousTrack]]"
-            disabled="[[playerObj.isOff]]"
-            on-click="handlePrevious"
+            icon="hass:power"
+            on-click="handleTogglePower"
+            invisible$="[[computeHidePowerButton(playerObj)]]"
+            class="self-center secondary"
           ></paper-icon-button>
+  
+          <div class="playback-controls">
+            <paper-icon-button
+              icon="hass:skip-previous"
+              invisible$="[[!playerObj.supportsPreviousTrack]]"
+              disabled="[[playerObj.isOff]]"
+              on-click="handlePrevious"
+            ></paper-icon-button>
+            <paper-icon-button
+              class="primary"
+              icon="[[computePlaybackControlIcon(playerObj)]]"
+              invisible$="[[!computePlaybackControlIcon(playerObj)]]"
+              disabled="[[playerObj.isOff]]"
+              on-click="handlePlaybackControl"
+            ></paper-icon-button>
+            <paper-icon-button
+              icon="hass:skip-next"
+              invisible$="[[!playerObj.supportsNextTrack]]"
+              disabled="[[playerObj.isOff]]"
+              on-click="handleNext"
+            ></paper-icon-button>
+          </div>
+  
           <paper-icon-button
-            class="primary"
-            icon="[[computePlaybackControlIcon(playerObj)]]"
-            invisible$="[[!computePlaybackControlIcon(playerObj)]]"
-            disabled="[[playerObj.isOff]]"
-            on-click="handlePlaybackControl"
-          ></paper-icon-button>
-          <paper-icon-button
-            icon="hass:skip-next"
-            invisible$="[[!playerObj.supportsNextTrack]]"
-            disabled="[[playerObj.isOff]]"
-            on-click="handleNext"
+            icon="hass:dots-vertical"
+            on-click="handleOpenMoreInfo"
+            class="self-center secondary"
           ></paper-icon-button>
         </div>
-
-        <paper-icon-button
-          icon="hass:dots-vertical"
-          on-click="handleOpenMoreInfo"
-          class="self-center secondary"
-        ></paper-icon-button>
+        <div class="clear-background"></div>
       </div>
     `;
   }
