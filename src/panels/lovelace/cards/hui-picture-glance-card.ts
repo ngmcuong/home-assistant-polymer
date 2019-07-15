@@ -115,6 +115,8 @@ class HuiPictureGlanceCard extends LitElement implements LovelaceCard {
     }
 
     return html`
+    <div class="wrapper">
+      <div class="empty-space"></div>
       <ha-card>
         <hui-image
           class="${classMap({
@@ -153,6 +155,8 @@ class HuiPictureGlanceCard extends LitElement implements LovelaceCard {
           </div>
         </div>
       </ha-card>
+      <div class="clear-background"></div>
+      </div>
     `;
   }
 
@@ -211,10 +215,33 @@ class HuiPictureGlanceCard extends LitElement implements LovelaceCard {
 
   static get styles(): CSSResult {
     return css`
+      .wrapper {
+        position: relative;
+        margin: 16px;
+        height: 95%;
+      }
+      
+      .clear-background {
+        height: 100%;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .8;
+        z-index: 1;
+        border-radius: 5px;
+      }
+      
+      .empty-space {
+        height: 20%;
+      }
+      
       ha-card {
         position: relative;
         min-height: 48px;
         overflow: hidden;
+        z-index: 2;
       }
 
       hui-image.clickable {

@@ -145,10 +145,10 @@ export class HUIView extends LitElement {
 	  }
 
       skeleton-carousel {
-        height: calc(100vh - 200px);
+        height: 100%;
         
         --skeleton-carousel-item: {
-            height: calc(100vh - 276px);
+            height: calc(90vh - 155px);
         }
         
         --skeleton-carousel-controls: {
@@ -157,11 +157,30 @@ export class HUIView extends LitElement {
             bottom: 0;
             left: 0;
             right: 0;
-            background: white;
+            background: transparent;
             display: flex;
-            justify-content: space-around;
-            }
-        } 
+            justify-content: space-between;
+            margin: 0 31px 16px;
+        }
+        
+        --skeleton-carousel-nav-prev: {
+          width: 40px;
+          height: 40px;
+          background: white;
+          color: #707070;
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+          border-radius: 50%;
+        }
+        
+        --skeleton-carousel-nav-next: {
+          width: 40px;
+          height: 40px;
+          background: white;
+          color: #707070;
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+          border-radius: 50%;
+        }
+      }
 
         .column > * {
           display: block;

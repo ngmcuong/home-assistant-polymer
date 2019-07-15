@@ -81,11 +81,11 @@ class HuiEntitiesToggle extends LitElement {
         
         --paper-toggle-button-checked-button-color: white;
         --paper-toggle-button-unchecked-button-color: white;
-        --paper-toggle-button-checked-bar-color: #00AE00;
+        --paper-toggle-button-checked-bar-color: var(--primary-color);
         --paper-toggle-button-unchecked-bar-color: #999999;
       }
       paper-toggle-button.on {
-        background-color: #00AE00;
+        background-color: var(--primary-color);
       }
       paper-toggle-button.on::before {
         content: '';

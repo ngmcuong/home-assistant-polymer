@@ -33,17 +33,19 @@ class HaEntityToggle extends LitElement {
     }
 
     if (this.stateObj.attributes.assumed_state) {
-      return html`
-        <paper-icon-button
-          icon="hass:flash-off"
-          @click=${this._turnOff}
-          ?state-active=${!this._isOn}
-        ></paper-icon-button>
-        <paper-icon-button
-          icon="hass:flash"
-          @click=${this._turnOn}
-          ?state-active=${this._isOn}
-        ></paper-icon-button>
+      return this._isOn ? html` 
+          <paper-icon-button
+            icon="hass:flash-off"
+            @click=${this._turnOff}
+            ?state-active=${!this._isOn}
+            class="flash flash-off"
+          ></paper-icon-button>`
+          : html`<paper-icon-button
+            icon="hass:flash"
+            @click=${this._turnOn}
+            ?state-active=${this._isOn}
+            class="flash flash-on"
+          ></paper-icon-button> 
       `;
     }
 
@@ -155,16 +157,26 @@ class HaEntityToggle extends LitElement {
         
         --paper-toggle-button-checked-button-color: white;
         --paper-toggle-button-unchecked-button-color: white;
-        --paper-toggle-button-checked-bar-color: #00AE00;
+        --paper-toggle-button-checked-bar-color: var(--primary-color);
         --paper-toggle-button-unchecked-bar-color: #999999;
       }
       
       paper-toggle-button.on {
-        background-color: #00AE00;
+        background-color: var(--primary-color);
       }
       paper-toggle-button.on::before {
         content: '';
         width: 18px;
+      }
+      
+      .flash {
+        border: 1px #666666 solid;
+        border-radius: 5px;
+      }
+      
+      .flash-on {
+        color: white;
+        background: var(--primary-color);
       }
     `;
   }

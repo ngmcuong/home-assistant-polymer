@@ -35,6 +35,14 @@ class HuiTextEntityRow extends LitElement implements EntityRow {
     return hasConfigOrEntityChanged(this, changedProps);
   }
 
+  private _generateClassnameForBinaryMovementSensor(stateObj: any): string {
+    console.log("stateObj", stateObj);
+    if (stateObj.state === 'on') {
+      return 'motion_detected';
+    }
+    return '';
+  }
+
   protected render(): TemplateResult | void {
     if (!this._config || !this.hass) {
       return html``;
@@ -54,9 +62,15 @@ class HuiTextEntityRow extends LitElement implements EntityRow {
       `;
     }
 
+    let className = '';
+    const { attributes = {} } = stateObj;
+    if (attributes.device_class === 'motion') {
+      className = this._generateClassnameForBinaryMovementSensor(stateObj);
+    }
+
     return html`
       <hui-generic-entity-row .hass="${this.hass}" .config="${this._config}">
-        <div>
+        <div class="${className}">
           ${computeStateDisplay(
             this.hass!.localize,
             stateObj,
@@ -71,6 +85,10 @@ class HuiTextEntityRow extends LitElement implements EntityRow {
     return css`
       div {
         text-align: right;
+      }
+      
+      .motion_detected {
+        color: var(--primary-color);
       }
     `;
   }

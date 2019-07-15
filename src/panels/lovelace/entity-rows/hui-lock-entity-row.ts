@@ -52,21 +52,52 @@ class HuiLockEntityRow extends LitElement implements EntityRow {
       `;
     }
 
+    console.log("stateObj", stateObj);
+
     return html`
       <hui-generic-entity-row .hass="${this.hass}" .config="${this._config}">
-        <mwc-button @click="${this._callService}">
-          ${stateObj.state === "locked"
-            ? this.hass!.localize("ui.card.lock.unlock")
-            : this.hass!.localize("ui.card.lock.lock")}
-        </mwc-button>
+        <span class="${stateObj.state === "unlocked" ? 'text' : 'locked-text'}">
+        ${stateObj.state === "unlocked"
+        ? this.hass!.localize("ui.card.lock.unlock")
+        : this.hass!.localize("ui.card.lock.lock")}
+        </span>
+        <button @click="${this._callService}">
+          <state-badge
+            class="${stateObj.state === "unlocked" ? 'button unlock' : 'button lock'}"
+            .stateObj="${stateObj}"
+          ></state-badge>
+        </button>
       </hui-generic-entity-row>
     `;
   }
 
   static get styles(): CSSResult {
     return css`
-      mwc-button {
+      button {
         margin-right: -0.57em;
+        margin-left: 5px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border: none;
+        background: none;
+        outline: none;
+      }
+      
+      .button {
+        border: 1px solid #BEBEBE;
+        border-radius: 5px;
+        color: #666666;
+      }
+      
+      .lock {
+        border-color: var(--primary-color);
+        background-color: var(--primary-color);
+        color: white;
+      }
+      
+      .locked-text {
+        color: var(--primary-color);
       }
     `;
   }

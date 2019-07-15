@@ -37,13 +37,8 @@ class HaAppLayout extends customElements.get("app-header-layout") {
           z-index: 0;
           background: url("/static/images/carousel-background.png") bottom no-repeat;
           background-size: contain;
-          background-position-y: calc(100% - 50px);
+          background-position-y: 100%;
         }
-          @media screen and (min-width: 768px) {
-            :host {
-              background-position-y: 100%;
-            }          
-          }
 
         #wrapper ::slotted([slot="header"]) {
           @apply --layout-fixed-top;

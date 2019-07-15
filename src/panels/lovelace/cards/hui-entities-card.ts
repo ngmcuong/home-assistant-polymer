@@ -28,6 +28,9 @@ import applyThemesOnElement from "../../../common/dom/apply_themes_on_element";
 const icons = {
   fan: "hass:fan",
   light: "hass:lightbulb",
+  switch: "hass:flash",
+  lock: "hass:lock",
+  binary_sensor: "hass:run",
 };
 
 @customElement("hui-entities-card")
@@ -85,6 +88,7 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
   }
 
   protected _renderIcon(type: any  | string): TemplateResult {
+    console.log("entities", type);
     let iconType = '';
     if (typeof type === 'object') {
       iconType = type.entity.toString().split('.')[0];
@@ -150,7 +154,7 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
       .wrapper {
         position: relative;
         margin: 16px;
-        height: 95%;
+        height: 97%;
       }
       
       .clear-background {
@@ -162,7 +166,7 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
         left: 0;
         opacity: .8;
         z-index: 1;
-        border-radius: 16px;
+        border-radius: 5px;
       }
       
       ha-card {
@@ -170,7 +174,7 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
         position: relative;
         background: transparent;
         box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-        border-radius: 16px;
+        border-radius: 5px;
         z-index: 2;
         overflow-y: auto;
       }

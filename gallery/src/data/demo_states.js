@@ -589,7 +589,7 @@ export default {
     attributes: {
       current_position: 70,
       current_tilt_position: 50,
-      friendly_name: "Living Room Window",
+      friendly_name: "Living Room Window 12398",
       supported_features: 255,
     },
     last_changed: "2018-07-19T10:44:46.220347+00:00",

@@ -145,15 +145,18 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
                   }
                 </span>
                 <div id="set-temperature"></div>
+                <div class="current-mode">
+                  Mode: ${this._renderCurrentMode(mode, stateObj)}
+              </div>
               </div>
           </div>
           </div>
           <div class="climate-info">
-            <div class="current-mode">
-              Mode: ${this._renderCurrentMode(mode, stateObj)}
-            </div>
             <div class="modes">
               ${(stateObj.attributes.operation_list || []).map((modeItem) => this._renderIcon(modeItem, mode))}
+            </div>
+            <div class="device-name">
+              ${this._config.name || computeStateName(stateObj)}
             </div>
           </div>
           </ha-card>
@@ -335,7 +338,7 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
     }
     return html`
       <ha-icon
-        class="${classMap({ "selected-icon": currentMode === mode })}"
+        class="${classMap({"selected-icon": currentMode === mode })}"
         .mode="${mode}"
         .icon="${modeIcons[mode]}"
         @click="${this._handleModeClick}"
@@ -393,12 +396,13 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
         }
         ha-card {
           overflow: hidden;
-          min-height: 275px;
+          min-height: 330px;
           height: 100%;
           position: relative;
-          background: transparent;
+          background: white;
           box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-          border-radius: 16px;
+          border-radius: 5px;
+          opacity: .9;
           z-index: 2;
           
           --rail-border-color: transparent;
@@ -420,9 +424,8 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           position: absolute;
           top: 0;
           left: 0;
-          opacity: .8;
           z-index: 1;
-          border-radius: 16px;
+          border-radius: 5px;
         }
         #root {
           position: relative;
@@ -560,10 +563,11 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
         }
         .climate-info {
           position: absolute;
-          bottom: -1px;
-          left: -1px;
+          bottom: 0;
+          left: 0;
+          right: 0;
           text-align: center;
-          width: 100%;
+          margin: 16px;
           z-index: 16;
         }
         .current-mode {
@@ -573,21 +577,37 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           padding: 10px 0;
         }
         .modes {
-          width: 102%;
+          width: 100%;
           display: flex;
-          padding-bottom: 5px;
+          justify-content: space-around;
+          margin-bottom: 5px;
         }
+        
+        .device-name {
+          font-size: 14px;
+          padding: 5px 0;
+        }
+        
         .modes ha-icon {
-          flex: 1;
+          padding: 8px 26px;
           color: var(--disabled-text-color);
           cursor: pointer;
           display: inline-block;
-          padding: 5px;
-          border: 1px solid #F2F2F2;
-          border-bottom: none;
+          border: 1px solid;
+          border-radius: 5px;
         }
+        @media only screen and (min-width: 600px)  {
+        ha-card {
+          min-height: 400px;
+        }
+
+            .modes ha-icon {
+              padding: 8px;
+            }
+          }
         .modes ha-icon.selected-icon {
           color: var(--mode-color);
+          border-color: var(--mode-color);
         }
         .current-temperature {
           position: absolute;
@@ -597,7 +617,6 @@ export class HuiThermostatCard extends LitElement implements LovelaceCard {
           font-size: var(--current-temperature-font-size);
           font-weight: bold;
           font-size: 64px;
-          line-height: 64px;
         }
         .current-temperature-text {
           padding-left: var(--current-temperature-text-padding-left);
