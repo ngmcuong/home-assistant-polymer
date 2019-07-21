@@ -54,7 +54,7 @@
             },
             "motion": {
                 "off": "Clear",
-                "on": "Detected"
+                "on": "Movement Detected"
             },
             "occupancy": {
                 "off": "Clear",

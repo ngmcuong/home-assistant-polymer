@@ -35,16 +35,16 @@ class HaEntityToggle extends LitElement {
     if (this.stateObj.attributes.assumed_state) {
       return this._isOn ? html` 
           <paper-icon-button
-            icon="hass:flash-off"
+            icon="hass:flash"
             @click=${this._turnOff}
             ?state-active=${!this._isOn}
-            class="flash flash-off"
+            class="flash flash-on"
           ></paper-icon-button>`
           : html`<paper-icon-button
-            icon="hass:flash"
+            icon="hass:flash-off"
             @click=${this._turnOn}
             ?state-active=${this._isOn}
-            class="flash flash-on"
+            class="flash flash-off"
           ></paper-icon-button> 
       `;
     }

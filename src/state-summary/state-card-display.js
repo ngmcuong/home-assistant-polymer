@@ -84,7 +84,12 @@ class StateCardDisplay extends LocalizeMixin(PolymerElement) {
   }
 
   computeStateDisplay(localize, stateObj, language) {
-    return computeStateDisplay(localize, stateObj, language);
+    let value = computeStateDisplay(localize, stateObj, language);
+    if(typeof value === 'object') {
+      value = stateObj.state + " " + stateObj.attributes.unit_of_measurement;
+      console.log('value', value);
+    }
+    return value;
   }
 
   computeClassNames(stateObj) {

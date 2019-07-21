@@ -35,17 +35,19 @@ class MoreInfoLight extends LocalizeMixin(EventsMixin(PolymerElement)) {
           max-height: 0px;
           overflow: hidden;
           transition: max-height 0.5s ease-in;
+          
+          --paper-progress-active-color: black;
         }
 
         .color_temp {
-          --ha-slider-background: -webkit-linear-gradient(
-            right,
-            rgb(255, 160, 0) 0%,
-            white 50%,
-            rgb(166, 209, 255) 100%
-          );
-          /* The color temp minimum value shouldn't be rendered differently. It's not "off". */
-          --paper-slider-knob-start-border-color: var(--primary-color);
+        /*  --ha-slider-background: -webkit-linear-gradient(*/
+        /*    right,*/
+        /*    rgb(255, 160, 0) 0%,*/
+        /*    white 50%,*/
+        /*    rgb(166, 209, 255) 100%*/
+        /*  );*/
+        /*  !* The color temp minimum value shouldn't be rendered differently. It's not "off". *!*/
+        /*  --paper-slider-knob-start-border-color: var(--primary-color);*/
         }
 
         .segmentationContainer {
@@ -125,41 +127,34 @@ class MoreInfoLight extends LocalizeMixin(EventsMixin(PolymerElement)) {
         paper-item {
           cursor: pointer;
         }
+        
+        ha-paper-dropdown-menu {
+          width: 100%;
+          
+          --paper-input-container-underline: {
+            display: none;
+          };
+          --paper-input-container-input: {
+            padding: 5px 5px 5px 16px;
+            border: 1px solid #BEBEBE;
+            border-right: none;
+            border-radius: 5px 0 0 5px;
+          };
+          --paper-dropdown-menu-icon: {
+            padding: 5px 5px 5px 16px;
+            border: 1px solid #BEBEBE;
+            border-left: none;
+            border-radius: 0 5px 5px 0;
+          }
+        }
+        .underline {
+          display: none;
+        }
+        
       </style>
 
       <div class$="[[computeClassNames(stateObj)]]">
-        <div class="control brightness">
-          <ha-labeled-slider
-            caption="[[localize('ui.card.light.brightness')]]"
-            icon="hass:brightness-5"
-            min="1"
-            max="255"
-            value="{{brightnessSliderValue}}"
-            on-change="brightnessSliderChanged"
-          ></ha-labeled-slider>
-        </div>
-
-        <div class="control color_temp">
-          <ha-labeled-slider
-            caption="[[localize('ui.card.light.color_temperature')]]"
-            icon="hass:thermometer"
-            min="[[stateObj.attributes.min_mireds]]"
-            max="[[stateObj.attributes.max_mireds]]"
-            value="{{ctSliderValue}}"
-            on-change="ctSliderChanged"
-          ></ha-labeled-slider>
-        </div>
-
-        <div class="control white_value">
-          <ha-labeled-slider
-            caption="[[localize('ui.card.light.white_value')]]"
-            icon="hass:file-word-box"
-            max="255"
-            value="{{wvSliderValue}}"
-            on-change="wvSliderChanged"
-          ></ha-labeled-slider>
-        </div>
-        <div class="segmentationContainer">
+      <div class="segmentationContainer">
           <ha-color-picker
             class="control color"
             on-colorselected="colorPicked"
@@ -169,12 +164,34 @@ class MoreInfoLight extends LocalizeMixin(EventsMixin(PolymerElement)) {
             saturation-segments="{{saturationSegments}}"
           >
           </ha-color-picker>
-          <paper-icon-button
-            icon="mdi:palette"
-            on-click="segmentClick"
-            class="control segmentationButton"
-          ></paper-icon-button>
         </div>
+        <div class="control brightness">
+          <ha-labeled-slider
+            caption="[[localize('ui.card.light.brightness')]]"
+            min="1"
+            max="255"
+            value="{{brightnessSliderValue}}"
+            on-change="brightnessSliderChanged"
+          ></ha-labeled-slider>
+        </div>
+        <div class="control color_temp">
+          <ha-labeled-slider
+            caption="[[localize('ui.card.light.color_temperature')]]"
+            min="[[stateObj.attributes.min_mireds]]"
+            max="[[stateObj.attributes.max_mireds]]"
+            value="{{ctSliderValue}}"
+            on-change="ctSliderChanged"
+          ></ha-labeled-slider>
+        </div>
+<!--        <div class="control white_value">-->
+<!--          <ha-labeled-slider-->
+<!--            caption="[[localize('ui.card.light.white_value')]]"-->
+<!--            icon="hass:file-word-box"-->
+<!--            max="255"-->
+<!--            value="{{wvSliderValue}}"-->
+<!--            on-change="wvSliderChanged"-->
+<!--          ></ha-labeled-slider>-->
+<!--        </div>-->
 
         <div class="control effect_list">
           <ha-paper-dropdown-menu

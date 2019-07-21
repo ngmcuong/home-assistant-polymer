@@ -11,6 +11,15 @@ export class HaPaperDropdownClass extends paperDropdownClass {
   public ready() {
     super.ready();
     // wait to check for direction since otherwise direction is wrong even though top level is RTL
+    const tpl = document.createElement("template");
+    tpl.innerHTML = paperDropdownClass.template.innerHTML;
+
+    const styleEl = document.createElement("style");
+    styleEl.innerHTML = `
+      :host {
+        background: black;
+      }
+      `;
     setTimeout(() => {
       if (window.getComputedStyle(this).direction === "rtl") {
         this.style.textAlign = "right";

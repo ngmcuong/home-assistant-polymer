@@ -40,6 +40,22 @@ class HuiSensorEntityRow extends LitElement implements EntityRow {
     return hasConfigOrEntityChanged(this, changedProps);
   }
 
+  private _displayText(stateObj) : TemplateResult | void {
+    const text = computeStateDisplay(
+      this.hass!.localize,
+      stateObj,
+      this.hass.language
+    );
+    if (typeof text === 'object') {
+      return html`<div class="value">
+        <span class="state" style="color: ${text.color}">${text.state}</span>
+        <span class="unit_of_measurement">${text.unit_of_measurement}</span>
+      </div>`
+    } else {
+      return text;
+    }
+  }
+
   protected render(): TemplateResult | void {
     if (!this._config || !this.hass) {
       return html``;
@@ -70,11 +86,7 @@ class HuiSensorEntityRow extends LitElement implements EntityRow {
                   .format="${this._config.format}"
                 ></hui-timestamp-display>
               `
-            : computeStateDisplay(
-                this.hass!.localize,
-                stateObj,
-                this.hass.language
-              )}
+            : this._displayText(stateObj)}
         </div>
       </hui-generic-entity-row>
     `;
@@ -84,6 +96,17 @@ class HuiSensorEntityRow extends LitElement implements EntityRow {
     return css`
       div {
         text-align: right;
+      }
+      .value {
+        display: flex;
+        align-items: baseline;
+      }
+      .state {
+        font-size: 20px;
+      }
+      .unit_of_measurement {
+        font-size: 12px;
+        padding-left: 5px;
       }
     `;
   }

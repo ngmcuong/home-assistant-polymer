@@ -9,7 +9,7 @@ export default (
   localize: LocalizeFunc,
   stateObj: HassEntity,
   language: string
-): string => {
+): string | any => {
   let display: string | undefined;
   const domain = computeStateDomain(stateObj);
 
@@ -28,7 +28,18 @@ export default (
     stateObj.attributes.unit_of_measurement &&
     !["unknown", "unavailable"].includes(stateObj.state)
   ) {
-    display = stateObj.state + " " + stateObj.attributes.unit_of_measurement;
+    // display = stateObj.state + " " + stateObj.attributes.unit_of_measurement;
+    let color = '#000';
+    if (stateObj.attributes.device_class === 'temperature') {
+      if (stateObj.state < 15) {
+        color = '#43B3EB';
+      } else if (stateObj.state > 30) {
+        color = '#FF0000';
+      } else {
+        color = '#000';
+      }
+    }
+    display = { state: stateObj.state, unit_of_measurement: stateObj.attributes.unit_of_measurement, color };
   } else if (domain === "input_datetime") {
     let date: Date;
     if (!stateObj.attributes.has_time) {
@@ -81,6 +92,7 @@ export default (
       localize(`component.${domain}.state.${stateObj.state}`) ||
       stateObj.state;
   }
+
 
   return display;
 };

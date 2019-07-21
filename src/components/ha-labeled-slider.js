@@ -25,6 +25,7 @@ class HaLabeledSlider extends PolymerElement {
 
         ha-paper-slider {
           background-image: var(--ha-slider-background);
+          width: 100%;
         }
       </style>
 

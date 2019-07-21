@@ -13,6 +13,26 @@ class HaPaperSlider extends PaperSliderClass {
     tpl.innerHTML = PaperSliderClass.template.innerHTML;
     const styleEl = document.createElement("style");
     styleEl.innerHTML = `
+      :host {
+        --paper-slider-container-color: transparent;
+        --paper-slider-height: 8px;
+        --paper-slider-knob-color: white;
+      }
+      .slider-knob-inner {
+        border: 1px solid #BEBEBE;
+      }
+      
+      #sliderContainer {
+        margin: 0;
+      }
+      
+      #sliderBar {
+        border: 1px solid #BEBEBE;
+        padding: 0;
+        width: 99%;
+        margin-top: 14px;
+        border-radius: 5px;
+      }
       .pin > .slider-knob > .slider-knob-inner {
         font-size:  var(--ha-paper-slider-pin-font-size, 10px);
         line-height: normal;

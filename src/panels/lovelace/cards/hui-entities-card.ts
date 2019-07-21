@@ -31,6 +31,7 @@ const icons = {
   switch: "hass:flash",
   lock: "hass:lock",
   binary_sensor: "hass:run",
+  remote: 'hass:remote',
 };
 
 @customElement("hui-entities-card")
@@ -88,7 +89,6 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
   }
 
   protected _renderIcon(type: any  | string): TemplateResult {
-    console.log("entities", type);
     let iconType = '';
     if (typeof type === 'object') {
       iconType = type.entity.toString().split('.')[0];
@@ -98,6 +98,23 @@ class HuiEntitiesCard extends LitElement implements LovelaceCard {
     if (iconType === 'cover') {
       return html`<img src="/static/icons/ic_door.png" alt="door icon" class="icon"/>`;
     }
+
+    if (iconType === 'sensor') {
+      const typeOfSensor = type.entity.toString().split('.')[1];
+
+      if (typeOfSensor.indexOf('humidity') > -1) {
+        return html`<img src="/static/icons/ic_drop.png" alt="humidity icon" class="icon"/>`;
+      }
+
+      if (typeOfSensor.indexOf('temperature') > -1) {
+        return html`<img src="/static/icons/ic_temp.png" alt="temperature icon" class="icon"/>`;
+      }
+
+      if (typeOfSensor.indexOf('light') > -1) {
+        return html`<img src="/static/icons/ic_light.png" alt="sun icon" class="icon"/>`;
+      }
+    }
+
     if (!icons[iconType]) {
       return html``;
     }
